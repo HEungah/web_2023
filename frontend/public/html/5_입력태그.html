@@ -19,10 +19,17 @@
 	 -->
 
 	<form>
-		입력상자		:	<input value="유재석" readonly="readonly">	<br/>
-		텍스트		:	<input type = "text" value="인사과" disabled="disabled">	<br/>
-		패스워드		:	<input type = "password" autofocus="autofocus">		<br/>
-		이메일		:	<input type = "email" maxlength="5">			<br/>	
+		<!-- <fieldset> : 입력상자들을 그룹화함 -->
+		<fieldset>
+			<!-- <legend> : 그룹 제목 -->
+			<legend> 그룹 제목 </legend>
+			<!-- placeholder="가이드라인" : 가이드라인 텍스트(입력하면 사라짐) -->
+			<input type = "text" placeholder="자기소개">
+			입력상자		:	<input value="유재석" readonly="readonly">	<br/>
+			텍스트		:	<input type = "text" value="인사과" disabled="disabled">	<br/>
+			패스워드		:	<input type = "password" autofocus="autofocus">		<br/>
+			이메일		:	<input type = "email" maxlength="5">			<br/>	
+		</fieldset>
 		
 		원형체크버튼(단일선택)<!-- [name 속성이 동일할경우 단일선택가능] -->	:
 			<input type = "radio" name = "confirm">	예
@@ -34,7 +41,9 @@
 		<br/>	
 		
 		첨부파일<!-- multiple 속성 사용시 여러개 파일 첨부 가능 -->		:	
-			<input type = "file" multiple="multiple">	<br/>	
+			<input type = "file" multiple="multiple">	<br/>
+		<hr/>
+				
 		색상			:	<input type = "color">			<br/>
 		날짜			:	<input type = "date">			<br/>
 		날짜/시간		:	<input type = "datetime-local">	<br/>
