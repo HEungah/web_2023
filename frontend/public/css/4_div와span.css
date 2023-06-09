@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+div{
+	border: solid 1px red;
+	margin: 20px;
+}
+
+span{
+	border: solid 1px orange;
+}
+
+.s1{
+	/* 디폴트값 */
+	display: inline;
+	/* inline은 크기설정이 불가능하다 */
+	width: 200px; height: 200px;
+}
+
+.s2{
+	/* span으로도 div효과를 낼 수 있다. */
+	display: block;
+	/* block은 크기설정이 가능하다 */
+	width: 200px; height: 200px;
+}
+
+.s3{
+	display: inline-block;
+	/* inline과 다르게 크기설정이 가능하다 */
+	width: 200px; height: 200px;
+}
+
+.s4{
+	display: none;
+}
+
+.d1{
+	display: inline;
+	width: 200px; height: 200px;
+}
+
+.d2{
+	display: block;
+	width: 200px; height: 200px;
+}
+
+.d3{
+	display: inline-block;
+	width: 200px; height: 200px;
+}
+
+.d4{
+	display: none;
+	width: 200px; height: 200px;	
+}
+
+
+
+
+
+
+
+
+
+
+

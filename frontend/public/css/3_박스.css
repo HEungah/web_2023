@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+*{padding: 0px; margin: 0px;} /*기본 여백 제거*/
+
+.box1{
+	border : solid 1px red;	/*선모양, 선굵기, 선색상*/
+}
+
+.box2{
+	border-top : solid 1px skyblue;	/*상단테두리*/
+	border-right: dotted 2px orange; /*오른쪽테두리*/
+	border-bottom: double 3px red;	/*하단테두라*/
+	border-left: dashed 4px black;	/*왼쪽테두리*/
+}
+
+.box3{
+	border: solid 2px red;
+	border-radius: 5px;	/*둥근모서리*/
+	box-shadow: 0px 0px 5px orange;	/*그림자*/
+	
+	padding : 10px;		/*안쪽여백*/
+	margin : 20px;		/*바깥여백*/
+}
+
+.box4{
+	border : solid 1px blue;
+	padding-top : 20px;		/*안쪽상단여백*/
+	padding-right: 20px;	/*안쪽오른쪽여백*/
+	padding-bottom: 20px;	/*안쪽하단여백*/
+	padding-left: 50px;		/*안쪽왼쪽여백*/
+	
+	margin-top: 50px;		/*바깥상단여백*/
+	margin-right: 30px;		/*바깥오른쪽여백*/
+	margin-bottom: 60px;	/*바깥하단여백*/
+	margin-left: 70px;		/*바깥왼쪽여백*/
+	
+}
+
+.box5{
+	border: solid 1px red;
+	width: 200px;	/*박스 가로 크기(생략시 100% 기본값적용[디바이스 크기])*/
+	
+	
+	padding: 10px 20px 30px 40px;	/*상단, 오른쪽, 하단, 왼쪽*/
+	padding: 10px 20px;		/*상단/하단, 오른쪽/왼쪽*/
+	margin: 10px 20px 30px 40px;	/*상단, 오른쪽, 하단, 왼쪽*/
+	margin: 10px 20px;	 /*상단/하단, 오른쪽/왼쪽*/
+	
+	text-align: center;	/*박스 안에 있는 내용물 가운데 정렬*/
+	margin: 0 auto;		/*박스를 가운데 정렬*/
+}
+
+.box6{
+	border: solid 1px orange;
+	margin: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
