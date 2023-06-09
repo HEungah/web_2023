@@ -11,6 +11,7 @@
 	font-family: 'kakao';
 	text-align: center;
 	margin-top: 100px;
+	margin-bottom: 20px;
 	font-size: 30px;
 }
 
@@ -40,6 +41,9 @@
 	color: black;
 }
 
+.text1{
+	font-size: 14px;
+}
 .check{
 	margin: 10px 0px 10px 50px;
 }
@@ -50,9 +54,70 @@
 	border: none;
 	background-color: #FEE500;
 	margin: 10px 0px 10px 50px;
-	font-weight: bold;
 	font-size: 14px;
 	
+}
+
+.qr_button{
+	width: 400px;
+	height: 40px;
+	border: none;
+	background-color: #F0F0F0;
+	margin: 10px 0px 10px 50px;
+	font-size: 14px;
+	
+}
+
+.row6{
+	text-align: right;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	margin-right: 48px;
+	font-size: 10px;
+}
+
+.text2{
+	margin-left: 10px;
+	border-right: solid 1px #F0F0F0;
+	padding-right: 8px;
+}
+
+.text3{
+	margin-left: 10px;
+}
+
+.button1{
+	background-color: white;
+	border: none;
+	font-size: 8px;
+}
+
+.button2{
+	background-color: white;
+	border: none;
+	font-size: 8px;
+	font-weight: bold;
+}
+
+.row7{
+	margin-top: 30px;
+	text-align: center;
+}
+
+.row8{
+	text-align: center;
+}
+
+.text4{
+	margin-top: 5px;
+	color: #c0c0c0;
+	font-size: 5px;
+}
+
+.text5{
+	margin-top: 5px;
+	font-size: 5px;
+	font-weight: bold;
 }
 
 li{
