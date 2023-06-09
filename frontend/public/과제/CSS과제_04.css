@@ -20,24 +20,39 @@
 	margin: 0 auto;
 }
 
-.row1{
+.id{
 	width: 400px;
 	height: 30px;
 	border : none;
-	border-bottom: solid 1px #eeeeee;
-	margin: 20px 0px 10px 50px; 
+	border-bottom: solid 2px #CCCCCC;
+	margin: 50px 0px 10px 50px; 
 	font-weight: bold;
-	color: #eeeeee;
+	color: black;
 }
 
-.row2{
+.password{
 	width: 400px;
 	height: 30px;
-	border : none;
-	border-bottom: solid 1px #eeeeee;
+	border: none;
+	border-bottom: solid 2px #CCCCCC;
 	margin: 10px 0px 10px 50px; 
 	font-weight: bold;
-	color: #eeeeee;
+	color: black;
+}
+
+.check{
+	margin: 10px 0px 10px 50px;
+}
+
+.login_button{
+	width: 400px;
+	height: 40px;
+	border: none;
+	background-color: #FEE500;
+	margin: 10px 0px 10px 50px;
+	font-weight: bold;
+	font-size: 14px;
+	
 }
 
 li{
