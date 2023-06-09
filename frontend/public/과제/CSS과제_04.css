@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+*{padding: 0; margin: 0;}
+
+@font-face {
+    font-family: 'kakao';
+    src: url('./폰트/KakaoOTFRegular.otf') format('truetype');
+}
+
+.title{
+	font-family: 'kakao';
+	text-align: center;
+	margin-top: 100px;
+	font-size: 30px;
+}
+
+.login_box{
+	width : 500px;
+	border: solid 1px #eeeeee;
+	margin: 0 auto;
+}
+
+.row1{
+	width: 400px;
+	height: 30px;
+	border : none;
+	border-bottom: solid 1px #eeeeee;
+	margin: 20px 0px 10px 50px; 
+	font-weight: bold;
+	color: #eeeeee;
+}
+
+.row2{
+	width: 400px;
+	height: 30px;
+	border : none;
+	border-bottom: solid 1px #eeeeee;
+	margin: 10px 0px 10px 50px; 
+	font-weight: bold;
+	color: #eeeeee;
+}
+
+li{
+	list-style-type: none;		/* 글머리제거 */
+}
+
+
+
+
+
+
+
