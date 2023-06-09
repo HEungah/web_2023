@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.text1{
+	display: inline-block;
+	margin-top: 50px;
+	color: #FFA500;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.text2{
+	display: inline-block;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.text3{
+	display: inline-block;
+	color: #FFA500;
+	font-weight: bold;
+}
+
+.box1{
+	border: solid 1px;
+	width : 600px;
+	background-color: #0F6878;
+	color: white;
+	padding: 20px;
+	line-height: 150%;
+	margin-top : 10px;
+}

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.d1{
+	width : 400px;
+	border: solid 1px #CCCCCC;
+	border-radius: 5px;
+	background-color:#EEEEEE;
+	line-height: 160%;
+	padding: 20px;
+	margin-top: 20px; 
+}
+
+.d2{
+	border: solid 2px #CCCCCC;
+	border-radius: 15px;
+	width: 300px;
+	padding: 20px;
+	margin-left: 25px;
+	margin-top: 25px; 
+}
+
+.t1{
+	border-left: solid 5px green;
+	padding-left: 10px;
+	display: inline-block;
+	font-weight: bold;	/*굵기*/
+	font-size: 20px;	/*폰트크기*/
+}
+
+.l1{
+	margin-bottom: 15px; 
+}
+
+.p1{
+	border-bottom: dotted 1px grey;
+	padding-bottom: 10px;
+}
+
+.text1{
+	text-align: right;
+}
