@@ -45,6 +45,8 @@
 .login_table{
 	width: 300px;
 	margin: 30px;
+	border: solid 1px black;
+	border-radius: 10px;
 }
 
 .login_table .id, .login_table .password{
