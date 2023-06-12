@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.box{
+	border: 1px solid blue;
+	width: 100px;
+}
+
+/* 1. 가로 배치할 부모요소 flex */
+
+.flex_box1{
+	border: 1px solid blue;
+	display: flex;				/* 하위 요소 배치방법 */
+	flex-direction: row;		/* 방향 : row 기본값 */
+	padding: 5px;
+}
+
+/* 2. 세로배치할 요소들의 부모요소에 flex */
+.flex_box2{
+	border: 1px solid red;
+	display: flex;				/* 하위 요소 배치방법 */
+	flex-direction: column;		/* 방향 : row 기본값 */
+	padding: 5px;
+}
+
+/* 3. 가로배치 반대로 배치하는 요소들의 부모요소 */
+.flex_box3{
+	border: 1px solid red;
+	display: flex;				/* 하위 요소 배치방법 */
+	flex-direction: row-reverse;		/* 방향 : row 기본값 */
+	padding: 5px;
+}
+
+/* 4. 세로배치 반대로 배치하는 요소들의 부모요소 */
+.flex_box4{
+	border: 1px solid red;
+	display: flex;				/* 하위 요소 배치방법 */
+	flex-direction: column-reverse;		/* 방향 : row 기본값 */
+	padding: 5px;
+}
+
+
+
+
+
+

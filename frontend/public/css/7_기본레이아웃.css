@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+#wrap{
+	width: 1200px;
+	margin: 0 auto;		/* 구역/박스 가운데 정렬 */
+}
+
+#header{
+	background-color: skyblue;
+	height: 200px;		/* 높이 사이즈 */
+}
+
+#content{
+	background-color: orange;
+	height: 600px;
+	display: flex;
+}
+
+#letf_menu{
+	background-color: grey;
+	width: 600px;
+}
+
+#right_menu{
+	background-color: purple;
+	width: 600px;
+}
+
+#footer{
+	background-color: black;
+	height: 200px;
+}

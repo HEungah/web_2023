@@ -41,9 +41,10 @@
 	color: black;
 }
 
-.text1{
+.text1{			/* 로그인체크박스 폰트 */
 	font-size: 14px;
 }
+
 .check{
 	margin: 10px 0px 10px 50px;
 }
