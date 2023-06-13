@@ -25,6 +25,64 @@ li{list-style-type: none;}
 }
 
 
+#main_bg{
+	width : 100%; height:250px;
+	background-image: url("img/main_img.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-top: 20px;
+}
+
+#main_content{
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	width: 1200px;
+	margin-top: 20px;
+}
+
+.side_menu{
+	width: 250px;
+}
+
+.side_menu h3{
+	background-color:  #516E7F;
+	color: white;
+	padding: 12px;
+}
+
+.side_menu li{
+	padding: 10px;
+}
+
+.content{
+	width: 935px;
+}
+
+.content h3{
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
+.content li{
+	padding: 5px;
+}
+
+.main_img{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
