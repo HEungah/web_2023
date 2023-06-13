@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+*{padding: 0px; margin: 0px}
+
+li{list-style-type: none;}
+
+@font-face {
+    font-family: '힘찬고딕';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+#header{
+	width: 1200px;
+	margin: 0px auto;
+	display: flex;			/* 하위요소 배치방법 */
+	justify-content: space-between;
+}
+.logo_img{
+}
+
+.logo_img img{
+	margin-top: 20px;
+}
+
+.top_menu{
+	text-align: right;
+	margin: 10px 0px;
+	font-size: 12px;
+}
+
+.top_menu_login li{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.top_menus li{
+	display: inline-block;
+	margin-left: 80px;
+	margin-top: 20px;
+	font-family: "힘찬고딕";
+	font-size: 18px;
+}
+
+#main_bg{			/* 상단 백그라운드 이미지 */
+	width: 100%; height: 250px;
+	background-image: url("img/main_bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 20px 0;
+}
+
+#content{			/* 본문 */
+	width: 1200px;
+	margin: 0px auto;
+	display: flex;			/* 하위요소 배치방법 */
+	justify-content: space-between;
+}
+
+.main_content1{			/* 본문 사이드 메뉴 */
+	width: 250px;
+}
+
+.top_side_menu{			/* 상단 사이드 메뉴 */
+	border-bottom: 2px solid black;
+	margin-bottom: 20px;
+}
+.top_side_menu h3{
+	color: white;
+	font-size: 20px;
+	background-color: #0CA9A3;
+	padding: 12px;
+}
+
+.search_input{
+	width: 170px;
+	height: 25px;
+}
+
+.search_btn{
+	width: 50px;
+	height: 30px;
+}
+
+.top_side_menu li{
+	padding: 10px;
+}
+
+.side_menu{		/* 중단 사이드 메뉴 */
+	border-bottom: 2px solid black;
+	margin-bottom: 20px;
+}
+
+.side_menu h3{
+	font-size: 15px;
+	border-bottom: 1px dotted #eeeeee;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.side_menu li{
+	font-size: 13;
+	padding: 12px;
+}
+
+.main_content2{
+	width: 470px;
+}
+
+.content{		/* 알림게시판 자유게시판 */
+	margin-bottom: 50px;
+}
+
+.content h4{
+	font-size:18px;
+	border-bottom: 1px solid black;
+	padding: 10px 0px;
+	margin-bottom: 10px;
+}
+
+.content li{
+	margin-bottom: 10px;
+}
+
+.info{
+	display: flex;
+	justify-content: space-between;
+}
+
+.main_content3{
+	width: 400px;
+}
+
+.main_content3 h4{		/* 본문3 타이틀 */
+	font-size:18px;
+	border-bottom: 1px solid black;
+	padding: 10px 0px;
+	margin-bottom: 10px;
+}
+
+.img_content{
+	display: flex;
+	justify-content: space-around;
+}
+
+.content2{		/* 제빵클래스 후기사진 */
+	width: 170px;
+}
+
+.content2 img{
+	width: 100%
+}
+
+.content2 ul{
+	margin-bottom: 15px;
+}
+
+#footer{		/* 푸터 */
+	width: 100%; height:250px;
+	display: flex;				/* 하위요소 배치방법 */
+	margin: 0 auto;				/* 가운데 정렬 */	
+	background-color: #05354E;
+	justify-content : space-around;
+	color: white;
+	margin-top: 40px;	
+}
+
+.footer_box{		/* 푸터 본문 box */
+	width: 1200px;
+	padding: 10px;
+}
+
+.footer_ul1 li{
+}
+
+.footer_1{
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.footer_1 li{		/* 푸터상단 */
+	display: inline-block;
+	text-align: left;
+	margin-right: 20px;
+}
+
+.footer_li1{		/* 푸터하단 */
+	
+}
+
+ .footer_2{
+	display: flex;
+}
+
+.footer_2 h4{
+	font-size: 18px;
+	margin-bottom: 10px;
+	padding-left: 20px;
+	margin-right: 110px;
+}
+
+.footer_2 li{
+	font-size: 13px;
+	padding-left: 20px;
+	padding-top: 3px;
+	margin-left: 5px;
+	margin-right: 110px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

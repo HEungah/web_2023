@@ -7,7 +7,7 @@
 }
 /* 자식요소들의 표기가 더 커지면 자동 줄바꿈 */
 .flexbox1{flex-wrap : wrap;
-		align-items: flex-start;
+		align-items: flex-start;	/* 윗변 정렬 */
 }		/* 윗변 정렬 */
 .flexbox2{align-items: center;}		/* 가운데 정렬 */
 .flexbox3{align-items: flex-end;}	/* 밑변 정렬 */
