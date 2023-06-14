@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+li{list-style-type: none;}
+
+.parent{
+	width: 700px; height: 590px;
+	background-color: green;
+	margin: 0 auto;
+	position: relative;
+}
+
+.box{
+	width: 100px; height: 70px;
+	background-color: yellow;
+	border-radius: 15px;		/* 둥근모서리 */
+	text-align: center;			/* 텍스트 가운데 정렬 */
+	position: absolute;			/* 절대 위치 */
+}
+
+.box1{
+	left: 300px; top : 100px;
+}
+
+.box2{
+	left: 150px; top : 170px;
+}
+
+.box3{
+	left: 450px; top : 170px;
+}
+
+.box4{
+	left: 150px; top : 340px;
+}
+
+.box5{
+	left: 450px; top : 340px;
+}
+
+.box6{
+	left: 300px; top : 410px;
+}
+
+
+
+/* ------------------------------------ */
+#header{
+	display: flex;	/* 하위요소 배치방법 */
+	flex-direction: row;	/* 기본값(생략가능) */
+	background-color: white;
+	border-bottom: 2px solid #eeeeee;
+	position: sticky;	/* 스크롤 이동했을때 위치 고정 */
+	top: 0px;	/* 가장 위에 붙음 */
+	/* 다른 요소와 위치가 겹쳤을때 - 우선순위 - 기본값0*/
+	z-index: 1;	/* 겹쳤을때 우선순위 순서(높을수록 앞에 배치) */
+}
+
+.h_menu li{
+	display: inline-block;
+}
+
+.popup{
+	width: 200px; height: 200px;
+	background-color: white;
+	border: 2px solid red;
+	position: fixed;	/* 디바이스 화면 위치 고정 */
+	right: 5px; bottom: 10px;
+	/* 메뉴,본문,팝업 겹쳤을때 우선순위 */
+	z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+

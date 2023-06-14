@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+a{		/* 모든 a태그에 적용 */
+	color: black;
+	text-decoration: none;	/* 밑줄, 윗줄, 취소선 */
+}
+
+/* 액션 속성 */
+a:hover{	/* 선택자:hover() -> 해당 요소에 마우스를 올렸을때 */
+	color: orange;
+	background-color: black;
+}
+
+a:active {	/* 해당 요소를 클릭(드래그)했을때 css */
+	color: blue;
+}
+
+a:visited {	/* 해당 요소를 클릭한적이 있으면 css */
+	color: red;
+}
+
+/* ---------------------------------------- */
+
+#hearder{
+	background-color: #eeeeee;
+	display: flex;
+	justify-content: center;
+}
+
+.drop_menu{
+	display: inline-block;
+	margin-left: 35px;
+	position: relative;
+}
+
+.drop_menu:hover .sub_menu{	/* 숨김상태인 서브메뉴를 마우스를 올렸을때 불러옴 */
+	display: block;
+}
+
+.sub_menu{
+	position: absolute;
+	top: 20px;
+	width: 100px;
+	display: none;		/* 숨김 */
+	background-color: #eeeeee;
+	padding-top: 10px;
+	
+	border-bottom: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
+	border-left: 1px solid #eeeeee;  
+} 
+
+*{padding: 0px; margin: 0px;}
+
+li{list-style-type: none;}
+
+
+
+
+
+
