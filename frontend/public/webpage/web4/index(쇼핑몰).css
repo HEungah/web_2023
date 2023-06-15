@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+/* 공통 여백 제거 */
+*{padding: 0px; margin: 0px; font-size: 12px;}
+/* a태그 기본값 제거 */
+a{color: black; text-decoration: none;}
+/* 리스트 글머리 제거 */
+li{list-style-type: none;}
+/* 웹폰트 */
+
+
+.top_menu{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	border-bottom: 1px solid #DBDBDB;	/* 아래 테두리 */
+	padding: 10px;
+	font-size: 10px;
+	margin-right: 20px;
+}
+
+.line{		/* 상단 메뉴 텍스트 여백 */
+	padding: 0px 10px;
+}
+
+.top_menu_icon{
+	width: 20px;
+	vertical-align: middle;
+}
+
+/* 메뉴와 검색창이 포함된 구역 */
+.main_menu{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom:10px;
+	
+	/* 
+		sticky 사용조건
+			1. 상위 부모의 사이즈 안에서 고정 vs fiexd[디바이스 화면에 절대 고정]
+			2. top right left bottom 1개 이상 필수로 있어야 한다.
+			3. 부모요소 overflew 속성 사용금지
+	 */
+	position: sticky;		/* 스크롤 내릴때 고정 */
+	top: 0px;
+	z-index: 1;			/* 겹쳤을때 */
+	background-color: white;
+	opacity: 0.8;		/* 요소 투명도(1:100% 0.5:50%) */
+}
+
+
+.main_logo img{
+	height: 20px;
+	margin-left: 30px;
+}
+
+/* 메뉴 */
+
+.bottom_menu{
+	width: 65%;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 20px;
+}
+
+.bottom_menu li{
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+/* new 색상 */
+.new{
+	color: red;
+}
+
+/* 검색창 박스 */
+.search_box{
+	border-bottom: 1px solid black;
+	margin-right: 50px;
+	padding-top: 20px;
+}
+
+/* 검색창 입력부분 */
+.search_box input{
+	border: none;
+	padding: 5px;
+	font-size: 15px;
+	width: 120px;
+}
+
+/* 검색창 돋보기 이미지 */
+.search_box img{
+	height: 15px;
+}
+
+/* 커서(포커스) */
+*focus{ outline: none;}
+
+/* 상단메뉴 리스트 */
+.drop_menu{
+	position: relative;		/* 상대위치 */
+}
+
+.drop_menu:hover .sub_menu{	/* 숨김상태인 서브메뉴를 마우스를 올렸을때 불러옴 */
+	display: block;
+}
+
+/* 상단메뉴 드롭박스 */
+.sub_menu{
+	position: absolute;		/* 절대위치(부모기준) */
+	left: -40px; top: 15px;		/* 드랍메뉴 위치 조정 */
+	
+	width: 120px;		/* 드랍메뉴 사이즈 */
+	display: none;		/* 숨김 */
+	background-color: white;
+	padding: 25px 0px 15px 0px; 
+}
+
+/* 드롭박스 정렬 */
+.sub_menu li{
+	text-align: center;
+	padding: 5px 0px;
+}
+
+/* 대표 이미지 */
+
+#main_img{
+	width: 100%;
+	margin-top: 20px;
+}
+
+
+/* ---------------본문------------- */
+
+#content{
+	width: 1600px;
+	padding: 50px 0px;
+	margin: 0 auto;
+}
+
+.main_content h3{
+	font-size: 17px;
+	text-align: center;
+}
+
+.main_content h4{
+	margin-top:10px;
+	font-size: 12px;
+	text-align: center;
+	color: #999999;
+}
+
+/* --------------제품-------------- */
+.item{
+	width: 380px;
+}
+
+.item img{
+	width: 100%;	/* 부모요소 크기를 따라감 */
+}
+
+/* 칼라 & 리뷰 구역 양끝으로 정렬*/
+.color_review{
+	display: flex;
+	justify-content: space-between;
+}
+
+/* 칼라 요소 구역 */
+.color span{		/* span 요소의 display : inline 크기와 높이 변경 불가 */
+	display:inline-block;
+	width: 10px; height: 10px;
+	border: 1px solid #DBDBDB;
+}
+
+.review{
+	color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+

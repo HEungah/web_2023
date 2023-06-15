@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<link href="index(쇼핑몰).css" rel="stylesheet">
+</head>
+<body>
+
+	<!-- 
+		- CSS선택자
+			*{}			:	모든 요소 공통
+			태그{}		:	동일한 태그간 공통(최대한 자제)
+			class{}		:	특정 요소들 간의 공통[복수형]
+				- input, div, ul, li 등등
+			id{}		:	특정 요소 1개[단일형]	 *페이지당 하나
+				- 레이아웃 [헤더, 본문, 푸터, 사이드바]
+	 -->
+
+	<div id="wrap">		<!-- 전체 레이아웃 -->
+		<!-- <div id="header">		헤더 -->
+			<ul class="top_menu">	<!-- 상단 메뉴 -->
+				<li><a href="#">LOGIN</a><span class="line"> | </span></li>
+				<li><a href="#">JOIN</a><span class="line"> | </span></li>
+				<li><a href="#">MYPAGE</a><span class="line"> | </span></li>
+				<li><a href="#">ORDER</a><span class="line"> | </span></li>
+				<li><a href="#">CART(0)</a><span class="line"> | </span></li>
+				<li><a href="#">COMMUNITY</a><span class="line"> | </span></li>
+				<li><a href="#"><img class="top_menu_icon" src="img/top_menu_img.png"></a></li>
+			</ul>
+			<div class="main_menu">		<!-- 메인 메뉴 -->
+				<ul	class="bottom_menu">	<!-- 메뉴 -->
+					<li>
+						<div class="main_logo">		<!-- 메인 로고 -->
+							<a href="#">
+								<img src="img/main_logo.png">
+							</a>
+						</div>
+					</li>
+					<li><a href="#">BEST</a></li>
+					<li><a href="#"><span class="new">NEW~20%</span></a></li>
+					<li class="drop_menu"><a href="#">MADE</a>		<!-- 드랍 메뉴 -->
+						<ul class="sub_menu">
+							<li><a href="#">티</a></li>
+							<li><a href="#">셔츠</a></li>
+							<li><a href="#">바지</a></li>
+							<li><a href="#">아우터</a></li>
+						</ul>
+					</li>
+					<li class="drop_menu"><a href="#">BIG SIZE</a>
+						<ul class="sub_menu">
+							<li><a href="#">티</a></li>
+							<li><a href="#">셔츠</a></li>
+							<li><a href="#">바지</a></li>
+							<li><a href="#">아우터</a></li>
+						</ul>
+					</li>
+					<li class="drop_menu"><a href="#">TOP</a>
+						<ul class="sub_menu">
+							<li><a href="#">맨투맨&후드티</a></li>
+							<li><a href="#">니트</a></li>
+							<li><a href="#">긴팔티</a></li>
+							<li><a href="#">반팔티</a></li>
+							<li><a href="#">나시</a></li>
+							<li><a href="#">프린팅티</a></li>
+						</ul>
+					</li>
+					<li class="drop_menu"><a href="#">SHIRTS</a>
+						<ul class="sub_menu">
+							<li><a href="#">베이직</a></li>
+							<li><a href="#">청남방</a></li>
+							<li><a href="#">체크&패턴</a></li>
+							<li><a href="#">스트라이프</a></li>
+							<li><a href="#">헨리텍&차이나</a></li>
+						</ul>
+					</li>
+					<li class="drop_menu"><a href="#">PANTS</a>
+						<ul class="sub_menu">
+							<li><a href="#">슬랙스</a></li>
+							<li><a href="#">면바지</a></li>
+							<li><a href="#">청바지</a></li>
+							<li><a href="#">밴딩팬츠</a></li>
+							<li><a href="#">반바지</a></li>
+						</ul>
+					</li>
+					<li class="drop_menu"><a href="#">OUTER</a>
+						<ul class="sub_menu">
+							<li><a href="#">패딩</a></li>
+							<li><a href="#">코트</a></li>
+							<li><a href="#">수트&블레이저</a></li>
+							<li><a href="#">자켓</a></li>
+							<li><a href="#">블루종/MA-1</a></li>
+							<li><a href="#">가디건&조끼</a></li>
+							<li><a href="#">후드&집업</a></li>
+						</ul>
+					</li>
+					<li class="drop_menu"><a href="#">SHOES&BAG</a>
+						<ul class="sub_menu">
+							<li><a href="#">신발</a></li>
+							<li><a href="#">가방</a></li>
+						</ul>
+					</li>
+					<li class="drop_menu"><a href="#">ACC</a>
+						<ul class="sub_menu">
+							<li><a href="#">양말&타이</a></li>
+							<li><a href="#">모자</a></li>
+							<li><a href="#">벨트&시계</a></li>
+							<li><a href="#">머플러&장갑</a></li>
+							<li><a href="#">안경</a></li>
+							<li><a href="#">쥬얼리</a></li>
+							<li><a href="#">etc</a></li>
+						</ul>
+					</li>
+					<li><a href="#">당일배송</a></li>
+					<li><a href="#">SALE</a></li>
+					<li><a href="#">BRAND</a></li>
+				</ul>
+				<span class="search_box">	<!-- 검색창 -->
+					<input type="text">
+					<a href="#"><img src="img/search_icon.png"></a>
+				</span>
+			</div>
+		<!-- </div>		헤더 끝 -->
+		
+		<img id="main_img" src="img/main_img.jpg">		<!-- 대표 이미지 -->
+		
+		<div id="content">		<!-- 본문 -->
+			<div class="main_content">
+				<h3>HOT ITEM</h3>
+				<h4>조군이 추천하는 핫 아이템 입니다.</h4>
+				<!-- hot item이 출력되는 구역 -->
+				<div class="items">
+					
+					<!-- 아이템/제품 1개 -->
+					<div class="item">
+						<!-- 이미지 -->
+						<img src="img/goods1.gif">
+						<div class="item_info">
+							<!-- 아이템 칼라 -->
+							<div class="color_review">
+								<span class="color">
+									<span style="background-color: #89959D"></span>
+									<span style="background-color: #973D46"></span>
+								</span>
+								<span class="review">
+									리뷰 : 447
+								</span>
+							</div>
+						</div>
+						<!-- 제품명 -->
+						<!-- 사이즈 -->
+						<!-- 원가 / 가격 / 할인율 -->
+						<!-- 아이콘들 -->
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>			<!-- 본문 끝 -->
+		<div id="footer">		<!-- 푸터 -->
+		
+		</div>			<!-- 푸터 끝 -->
+	</div>		<!-- 전체 레이아웃 끝 -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

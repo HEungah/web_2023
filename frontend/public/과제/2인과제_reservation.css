@@ -68,18 +68,34 @@ a{ /* 모든 a 태그에 적용 */
 
 .content_box{		/* 메인 박스 */
 	display: flex;
-	justify-content: center;	
+	justify-content: flex-start;	
+	margin-top: 60px;
+	margin-bottom: 100px;
 }
 
 .main_side_box{		/* 왼쪽 메인 박스 */
 	width:60%;
+	height:500px;;
 	background-color: #FCF9EA;
 	text-align: center;
+	margin-right: 30px;
 }
 
 .main_side1 li{
 	margin: 15px 0px;
 }
+
+.cal_img li{
+	display: inline-block;
+}
+
+.cal_img img{		/* 달력 넘기기 버튼 이미지 */
+	width: 13px; height: 13px;
+	margin-top: 12px;
+}
+
+
+
 
 .cal{		/* 달력 박스 지정 */
 	margin: 0 auto;
