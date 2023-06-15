@@ -1,12 +1,13 @@
 @charset "UTF-8";
 
+
 *{padding: 0px; margin: 0px;}
 
 li{list-style-type: none;}
 
 a{color: black; text-decoration: none;}
 
-/* 헤더 전체 */
+/* 헤더 전체 (팀원:신예지) */
 #header{
    width: 1200px;
    margin: 0 auto;
@@ -33,9 +34,8 @@ a{color: black; text-decoration: none;}
 /* 헤더 메뉴의 링크 */
 .hd_menu a{ margin-left: 30px; }
 
-a{ /* 모든 a 태그에 적용 */
-   color: black;
-   text-decoration: none; /* 밑줄, 윗줄, 취소선 없음으로 설정*/
+.hd_logo_the a{
+	color: #3F62BA;
 }
 
 /* 헤더 밑 대표이미지 */
@@ -68,34 +68,19 @@ a{ /* 모든 a 태그에 적용 */
 
 .content_box{		/* 메인 박스 */
 	display: flex;
-	justify-content: flex-start;	
-	margin-top: 60px;
-	margin-bottom: 100px;
+	justify-content: center;
+	margin: 50px 0px;	
 }
 
 .main_side_box{		/* 왼쪽 메인 박스 */
 	width:60%;
-	height:500px;;
 	background-color: #FCF9EA;
 	text-align: center;
-	margin-right: 30px;
 }
 
 .main_side1 li{
 	margin: 15px 0px;
 }
-
-.cal_img li{
-	display: inline-block;
-}
-
-.cal_img img{		/* 달력 넘기기 버튼 이미지 */
-	width: 13px; height: 13px;
-	margin-top: 12px;
-}
-
-
-
 
 .cal{		/* 달력 박스 지정 */
 	margin: 0 auto;
@@ -125,12 +110,26 @@ a{ /* 모든 a 태그에 적용 */
 }
 
 
+.info{
+	margin: 20px 30px;
+	line-height: 180%;	
+}
+.info h3{
+	border-left: solid 8px #444444;
+	padding-left: 10px;
+	
+}
+
+.info_tel{
+	color: green;
+	font-weight: bold;
+}
 
 
 
 
 
-/*------ 푸터 -------*/
+/*------ 푸터 (팀원:최의선)-------*/
 
 #footer{        
    background-color: #292C32;
