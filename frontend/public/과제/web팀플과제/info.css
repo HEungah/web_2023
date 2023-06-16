@@ -237,16 +237,12 @@ a{		/* 모든 a태그에 적용 */
 
 /* 본문 내용 리스트 박스 */
 .info_image_list{
-	width: 33%;
+	width: 30%;
 	display: inline-block;
 	position: relative;
-}
-
-/* 본문 내용 리스트 박스 크기 조절 */
-.info_list_box{
-	width: 100%;
 	margin: 0px 6px 30px 6px;
 }
+
 
 .info_image_list:hover { border: 1px solid red;}
 
