@@ -17,6 +17,7 @@ a:active {	/* 해당 요소를 클릭(드래그)했을때 css */
 
 a:visited {	/* 해당 요소를 클릭한적이 있으면 css */
 	color: red;
+	background-color: black;
 }
 
 /* ---------------------------------------- */
