@@ -13,6 +13,7 @@ a{		/* 모든 a태그에 적용 */
 *:focus{ outline: none; }
 
 
+/* 외부폰트 적용 */
 @font-face {
      font-family: 'S-CoreDream-3Light';
      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
@@ -134,6 +135,7 @@ a{		/* 모든 a태그에 적용 */
 	background-color: white;
 }
 
+/* 전체 지역 클릭박스 */
 .info_all{
 	width: 16.6%;
 	border-left: 1px solid #ddd;
@@ -149,6 +151,7 @@ a{		/* 모든 a태그에 적용 */
 	background-color: red;
 }
 
+/* 서울 경기 지역 클릭박스 */
 .info_seoul{
 	width: 16.6%;
 	border-left: 1px solid #ddd;
