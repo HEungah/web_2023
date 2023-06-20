@@ -201,9 +201,9 @@ let num2 = prompt('두번째 숫자를 입력해주세요')
 console.log((num1>=num2 ? num1 : num2))
 
 // 문제 10
-let num3 = prompt('첫번째 숫자를 입력해주세요')
-let num4 = prompt('두번째 숫자를 입력해주세요')
-let num5 = prompt('세번째 숫자를 입력해주세요')
+let num3 = Number(prompt('첫번째 숫자를 입력해주세요'))
+let num4 = Number(prompt('두번째 숫자를 입력해주세요'))
+let num5 = Number(prompt('세번째 숫자를 입력해주세요'))
 console.log(((num3>=num4) && (num3>=num5)  ? num3 : (num4 >= num5) ? num4 : num5))
 
 // 문제 11
