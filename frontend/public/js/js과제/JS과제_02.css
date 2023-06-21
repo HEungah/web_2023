@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+*{padding: 0px; margin: 0px;}
+
+.header_background{
+	width:100%;
+	background-color: white;
+	margin: 0 auto;
+}
+
+.header_box{
+	width: 1300px;
+	margin: 0 auto;
+}
+
+.header_title{
+	padding: 30px;
+	background-color: white;
+}
+
+.header_title h2{
+	font-size: 30px;
+	background-color: white;
+}
+
+
+#main{}
+
+.main_background{
+	background-color: #eeeeee;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.main_box{
+	width: 1300px;
+	margin: 0 auto;
+	padding-bottom: 60px;
+}
+
+.main_title{
+	display: flex;
+	justify-content: flex-start;
+}
+
+.main_title h3{
+	width: 50%;
+	display: inline-block;
+	margin: 20px 0px 20px 170px;
+}
+
+.content_box{
+	height: 400px;
+	display: flex;
+	justify-content: flex-start;
+	border: 1px solid #000000;
+	padding: 20px 0px;
+}
+
+.membership{
+	width: 40%;
+	display: inline-block;
+	margin: 0 auto;
+	position: relative;
+}
+
+.id_box{
+	padding: 120px 100px 10px 100px;
+}
+
+.member_id{
+	background-color: white;
+	text-align: center;
+	width: 200px;
+}
+
+.pw_box{
+	padding: 0px 100px 10px 100px;
+}
+
+.member_password{
+	background-color: white;
+	text-align: center;
+	width: 200px;
+}
+
+.member_button{
+	width: 100px;
+	color: white;
+	background-color: #000000;
+	position: absolute;
+	padding: 15px;
+	top: 120px;
+	right: 80px;
+}
+
+.login{
+	width: 40%;
+	display: inline-block;
+	margin: 0 auto;
+	position: relative;
+}
+
+.login_id{
+	background-color: white;
+	text-align: center;
+	width: 200px;
+}
+
+.login_password{
+	background-color: white;
+	text-align: center;
+	width: 200px;
+}
+
+.login_button{
+	width: 100px;
+	color: white;
+	background-color: #000000;
+	position: absolute;
+	padding: 15px;
+	top: 120px;
+	right: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
