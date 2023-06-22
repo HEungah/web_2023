@@ -37,6 +37,7 @@ function membership(){
 	let idInput = document.querySelector('.member_id')
 	let pwInput = document.querySelector('.member_password')
 	
+	// 
 	let id = 0
 	if(idInput.value == ''){
 		idInput.value = '201411782'
