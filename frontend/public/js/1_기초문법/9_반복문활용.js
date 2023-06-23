@@ -351,7 +351,7 @@ line = 3  5(3*2-1)칸
       *			line = 4 별 1개	' ' 12개
     *****		line = 5 별 5개	' ' 8개
   *********		line = 6 별 9개	' ' 4개
-*************	line = 7 별 13개 ' ' 0개
+*************	line = 7 별 13개 	' ' 0개
 중간줄 판별
 7 -> 4(i)
 5 -> 3(i)
@@ -371,9 +371,9 @@ for(let i = 1; i <= line; i++){
 		result ='';
 	}else if((i*2) -1 == line){
 		for(let j = 0; j <(line*2) -1; j++){
-			if(j == (i*2) -1){
-				
-			}
+			if(j+1 == (i*2) -1){
+				result += '*';
+			}else{result += ' ';}
 		}
 		console.log(result);
 		result ='';
