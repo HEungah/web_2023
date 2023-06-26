@@ -56,15 +56,7 @@ function listInput(){
 	for(let i = 0; i < price.length; i++){
 		total += Number(price[i]);
 	}
-	
-	tableHTML = `<tr>
-				<td colsapn = "2">-총합계-</td>
-				<td>${total}</td>
-				<td><button onclick="removetd(${date.indexOf(datevalue)})">삭제</button></td>
-				</tr>
-				`;
-				
-	tableInput.innerHTML += tableHTML;			
+			
 	
 	
 	datevalue = '';
@@ -74,9 +66,10 @@ function listInput(){
 }
 
 function removetd(index){
-	
-	
-	
+	let stable = document.getElementById('maintable');
+	console.log(stable.rows.length);
+	console.log(index);
+	stable.deleteRow(index);
 }
 
 
