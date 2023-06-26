@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+*{padding: 0px; margin: 0px;}
+
+#header{
+	width: 100%;
+}
+
+.headerbox{
+	width: 1300px;
+	margin: 0 auto;
+	padding-top: 180px;
+}
+
+#main{
+	width: 100%
+}
+
+.mainbox{
+	width: 1300px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+
+.maintable{
+	width: 100%;
+}
+
+.date{
+	width: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

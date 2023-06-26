@@ -117,6 +117,7 @@ function 추첨결과(){
 	}else{alert('꽝입니다.');}
 	
 	console.log(randomlotto);
+	console.log('맞은개수 => ' + count);
 }
 
 
