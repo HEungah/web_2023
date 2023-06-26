@@ -30,26 +30,42 @@ let price = [];		// 금액 저장 배열
 function listInput(){
 	let datevalue = document.querySelector('.dateInput').value;
 	let entryvalue = document.querySelector('.entryInput').value;
-	let pricevalue = document.querySelector('.priceInput').value;
+	let pricevalue = Number(document.querySelector('.priceInput').value).toLocaleString();
 	
 	date.push(datevalue);
 	entry.push(entryvalue);
 	price.push(pricevalue);
+	console.log(pricevalue);
 	
 	console.log(date);
 	console.log(entry);
 	console.log(price);
 	
-	let tableInput = document.querySelector('.maintable');
+	let tableInput = document.querySelector('.tablebody');
 	let tableHTML = `<tr>
 					<td>${datevalue}</td>
 					<td>${entryvalue}</td>
 					<td>${pricevalue}</td>
-					<td><button onclick="remove(${datevalue}, ${entryvalue}, ${pricevalue})">삭제</button></td>
-				</tr>	
-				`;
-	console.log(tableHTML)	
+					<td><button onclick="removetd(${date.indexOf(datevalue)})">삭제</button></td>
+					</tr>	
+					`;	
 	tableInput.innerHTML += tableHTML;
+	
+	let total = 0;
+	
+	for(let i = 0; i < price.length; i++){
+		total += Number(price[i]);
+	}
+	
+	tableHTML = `<tr>
+				<td colsapn = "2">-총합계-</td>
+				<td>${total}</td>
+				<td><button onclick="removetd(${date.indexOf(datevalue)})">삭제</button></td>
+				</tr>
+				`;
+				
+	tableInput.innerHTML += tableHTML;			
+	
 	
 	datevalue = '';
 	entryvalue = '';
@@ -57,10 +73,10 @@ function listInput(){
 	
 }
 
-function remove(datetd, entrytd, pricetd){
-	console.log(datetd);
-	console.log(entrytd);
-	console.log(pricetd);
+function removetd(index){
+	
+	
+	
 }
 
 
