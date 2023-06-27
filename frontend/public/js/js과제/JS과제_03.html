@@ -11,22 +11,24 @@
 		<div id="header">	<!-- 헤더 -->
 			<div class="headerbox">
 				<h2>의선's 가계부</h2>
-				<input class="dateInput" type="date" placeholder="날짜">
-				<input class="entryInput" type="text" placeholder="항목">
-				<input class="priceInput" type="text" placeholder="금액">
-				<button onclick="listInput()">입력</button>
+				<div class="inputbox">
+					<input class="dateInput" type="date" placeholder="날짜">
+					<input class="entryInput" type="text" placeholder="항목">
+					<input class="priceInput" type="text" placeholder="금액">
+					<button onclick="listInput()">입력</button>
+				</div>
 			</div>
 		</div>
 		
 		<div id="main">		<!-- 본문 -->
 			<div class="mainbox">
 				<table border = "1" id="maintable">
-					<thead>
+					<tr class="tablehead">
 						<th class="date">날짜</th>
 						<th>항목</th>
 						<th>금액</th>
 						<th>비고</th>
-					</thead>
+					</tr>
 					<tbody class="tablebody">
 					</tbody>
 				</table>
