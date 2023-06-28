@@ -20,8 +20,11 @@ let datelist = []	// 작성시간을 저장할 배열 생성
 
 
 
+
 function postInput(){	// 글 등록버튼을 누르면 실행되는 함수
 	console.log('글 등록버튼을 눌렀습니다.')
+	
+	let count = 0;		// 조회수 초기값
 	
 	let writerInput = document.querySelector('.writer').value;	// 작성자 입력칸의 값을 가져와서 저장
 	let pwInput = document.querySelector('.pw').value;	// 비밀번호 입력칸의 값을 가져와서 저장
@@ -29,7 +32,7 @@ function postInput(){	// 글 등록버튼을 누르면 실행되는 함수
 	let contentInput = document.querySelector('.content').value;	// 내용 입력칸의 값을 가져와서 저장
 	
 	// 받아온 값을 객체에 저장
-	let post ={writer : writerInput, pw : pwInput, title : titleInput, content : contentInput}
+	let post ={writer : writerInput, pw : pwInput, title : titleInput, content : contentInput, view : Number(count)}
 	
 	postslist.push(post);	// 생성된 객체를 postslist 배열에 저장
 	
@@ -59,14 +62,15 @@ function pageAdd(){	// 글목록 페이지 테이블 생성 함수
 	
 	// 배열 길이만큼 테이블 추가
 	for(let i = 0; i < postslist.length; i++){
-		tableHTML += `<div>
-					<tr>
-					<td>${i + 1}</td>
-					<td>${postslist[i].title}</td>
-					<td>${postslist[i].writer}</td>
-					<td>${datelist[i]}</td>
-					</tr>
-					</div>
+		// onclick속성을 추가하여 글을 클릭했을때 postview 함수 실행
+		tableHTML += `
+						<tr onclick="postview(${i})">
+							<td>${i + 1}</td>
+							<td>${postslist[i].title}</td>
+							<td>${postslist[i].writer}</td>
+							<td>${datelist[i]}</td>
+							<td>${postslist[i].view}</td>
+						</tr>
 					`;	
 	}
 	
@@ -92,6 +96,33 @@ function dateAdd(){		// 작성 시간을 계산하는 함수
 					+ hours + ':' + minutes + ':' + seconds;
 					
 	datelist.push(dateStr);	// datelist에 현재 작성시간 저장				
+}
+
+function postview(index){	// 등록된 글을 클릭하면 조회수 증가하고 글보기 페이지에 상세정보를 표기하는 함수
+	postslist[index].view++;	// <tr> 태그를 클릭하면 조회수 상승
+	
+	pageAdd();	// 조회수를 상승시키고 테이블 출력
+	
+	let postInput = document.querySelector('.viewpost');	// viewpost 클래스의 내용속성을 가져옴
+	let postHTML = ``;		//  html 출력을 위한 변수 생성
+	
+	postHTML += `
+				제목 : ${postslist[index].title}<br/>
+				내용 : ${postslist[index].content}<br/>
+				작성자 : ${postslist[index].writer}<br/>
+				<button onclick="removePost(${index})">삭제</button>
+				`
+	postInput.innerHTML = postHTML;			
+}
+
+function removePost(index){		// post삭제 함수
+	postslist.splice(index, 1);
+	
+	pageAdd();
+	
+	let postInput = document.querySelector('.viewpost');
+	let postHTML = ``;
+	postInput.innerHTML = postHTML;
 }
 
 
