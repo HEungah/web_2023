@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+*{padding: 0px; margin: 0px;}
+
+#wrap{
+	width: 100%;
+}
+
+.body{
+	width: 1300px;
+	margin-top : 200px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.body div{
+	margin-left: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
