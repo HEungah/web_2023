@@ -35,6 +35,8 @@ function postInput(){	// 글 등록버튼을 누르면 실행되는 함수
 	
 	alert('작성이 완료되었습니다.');
 	
+	console.log(postslist);
+	
 	// ----------입력창 초기화----------------
 	document.querySelector('.writer').value = '';
 	document.querySelector('.pw').value = '';
@@ -57,12 +59,14 @@ function pageAdd(){	// 글목록 페이지 테이블 생성 함수
 	
 	// 배열 길이만큼 테이블 추가
 	for(let i = 0; i < postslist.length; i++){
-		tableHTML += `<tr>
+		tableHTML += `<div>
+					<tr>
 					<td>${i + 1}</td>
 					<td>${postslist[i].title}</td>
 					<td>${postslist[i].writer}</td>
 					<td>${datelist[i]}</td>
-					</tr>	
+					</tr>
+					</div>
 					`;	
 	}
 	
