@@ -60,8 +60,12 @@
 	
 */
 
+// JS를 열었을때 이벤트 실행
+
 let postslist = [] 	// 게시글 객체를 저장할 배열 생성
 let datelist = []	// 작성시간을 저장할 배열 생성
+
+
 
 
 
@@ -158,8 +162,9 @@ function postview(index){	// 등록된 글을 클릭하면 조회수 증가하�
 	
 	postHTML += `
 				제목 : ${postslist[index].title}<br/>
-				내용 : ${postslist[index].content}<br/>
 				작성자 : ${postslist[index].writer}<br/>
+				내용 : ${postslist[index].content}<br/>
+				<button onclick="modifyInput(${index})">수정</button>
 				<button onclick="removePost(${index})">삭제</button>
 				`
 	postInput.innerHTML = postHTML;			
@@ -168,22 +173,72 @@ function postview(index){	// 등록된 글을 클릭하면 조회수 증가하�
 function removePost(index){		// post삭제 함수
 	let pwcheck = Number(prompt('비밀번호를 입력해주세요'));
 	
-	if(postslist[index].pw == pwcheck){
+	if(postslist[index].pw == pwcheck){	// 게시글의 비밀번호와 입력한 비밀번호 검사
 		
-	
-
 		postslist.splice(index, 1);
 		datelist.splice(index, 1);
 		
-		pageAdd();
+		pageAdd();	// 게시글 삭제후 게시글 목록 출력
 		
+		// 게시글 삭제후 상세보기 페이지도 초기화 시켜줌
 		let postInput = document.querySelector('.viewpost');
 		let postHTML = ``;
 		postInput.innerHTML = postHTML;
 		
 	}else{
-		alert('비밀번호가 틀렸습니다.')
+		alert('비밀번호가 틀렸습니다.');
 	}
+}
+
+
+function modifyInput(index){	// 수정사항 입력 HTML 출력함수
+	let pwcheck = Number(prompt('비밀번호를 입력해주세요'));
+	
+	if(postslist[index].pw == pwcheck){
+		let modifyInput = document.querySelector('.writebox');
+		let modifyHTML = ``;
+		
+		modifyHTML += 	`
+						<div class="modifybox">
+						<h3>게시물 수정</h3>
+						작성자 : <input class="mwriter" type="text" /><br/>
+						비밀번호 : <input class="mpw" type="text" /><br/>
+						제목 : <input class="mtitle" type="text" /><br/>
+						내용 : <textarea class="mcontent"></textarea><br/>
+						<button onclick="modifyPost(${index})">수정</button>
+						</div>
+						`
+		
+		modifyInput.innerHTML += modifyHTML;
+	}else{
+		alert('비밀번호가 틀렸습니다.');
+	}
+}
+
+function modifyPost(index){		// 게시글 수정 함수
+	let writerInput = document.querySelector('.mwriter').value;	// 작성자 입력칸의 값을 가져와서 저장
+	let pwInput = document.querySelector('.mpw').value;	// 비밀번호 입력칸의 값을 가져와서 저장
+	let titleInput = document.querySelector('.mtitle').value;	// 제목 입력칸의 값을 가져와서 저장
+	let contentInput = document.querySelector('.mcontent').value;	// 내용 입력칸의 값을 가져와서 저장
+	
+	postslist[index].writer = writerInput;		// 입력된값을 각 객체의 속성에 저장
+	postslist[index].pw = pwInput;
+	postslist[index].title = titleInput;
+	postslist[index].content = contentInput;
+	postslist[index].view = 0;
+	
+	dateAdd();		// 수정될때의 시간 생성
+	
+	datelist[index] = datelist[datelist.length-1];		// 새로 생성한 시간을 게시글의 인덱스와 맞는 datelist의 인덱스의 값에 저장
+	datelist.splice(datelist.length-1, 1);	// 새로 만든 시간은 삭제
+	
+	pageAdd();		// 수정후 게시글 목록 출력
+	
+	let modifyInput = document.querySelector('.modifybox');
+	let modifyHTML = ``;
+	
+	modifyInput.innerHTML = modifyHTML;	// 수정 입력창 삭제
+	
 }
 
 

@@ -7,15 +7,35 @@
 }
 
 .body{
-	width: 1300px;
+	width: 1800px;
 	margin-top : 200px;
 	display: flex;
-	justify-content: flex-start;
 }
 
-.writebox, .tablebox, .postbox{
+.writebox, .postbox{
 	margin-left: 100px;
+	width: 400px;
 }
+
+.writebox h3{
+	text-align: center;
+}
+
+.postbox h3{
+	text-align: center;
+}
+
+.tablebox{
+	margin-left: 100px;
+	width: 800px;
+	text-align: center;
+}
+
+.tablemain{
+	margin: 0 auto;
+}
+
+
 
 
 
