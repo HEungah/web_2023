@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.wrap{
+	width: 1000px;	height: 600px;
+	background-image: url("img/background.jpg");	 /* 구역 사이즈 필수 */
+	background-repeat: no-repeat;	/* 만일 배경이미지보다 구역사이즈가 더 크면 채우기기능 없애기 */
+	margin: 0 auto;
+	background-size: 100%;	/* 배경이미지 사이즈를 구역 사이즈에 맞춤 */
+	position: relative;		/* 하위요소들의 위치 기준 */
+}
+
+/* 유저 캐릭터 구역 */
+.userbox{
+	width: 150px; height: 100px;
+	background-image: url("img/캐릭터.png");
+	background-repeat: no-repeat;
+	background-size: 60%;
+	position: absolute;
+	top : 400px;	left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
