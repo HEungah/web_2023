@@ -66,13 +66,92 @@
 /* 카트 출력 구역 */
 .cartbox{
 	height: 250px;
-	
+	background-color: #eeeeee;
+	position: relative;
 }
 
 
+/* 카트 상단 부분 */
+.carttop{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 50px;
+}
+
+/* 카트내 제품수 꾸미기 */
+.ccount{
+	background-color: red;
+	width: 30px;	/* span은 inline이 기본값이므로 크기 적용이 불가능 */
+	display: inline-block;	/* span의 기본값을 변경 */
+	border-radius: 30px;
+	font-size: 15px;
+	text-align: center;
+	color: white;
+	padding: 4px;
+}
+
+/* 카트내 제품 총가격 */
+.ctotal{
+	color: red;
+}
 
 
+/* 카트내 제품을 출력 하는 구역 flex는 자식 요소들이 만약에 사이즈가 더크면 자동으로 자식요소들의 사이즈를 줄임*/
+/* 1. flex-wrap사용 2. 최소사이즈 고정 사용 */
+.cartbottom{
+	display: flex;
+	overflow-x: scroll;	/* 가로 스크롤 */
+}
 
+/* 카트내 제품 하나 출력 */
+
+.citem{
+	min-width: 20%; /* 한줄에 4개씩 최소 사이즈 지정*/
+	background-color: white;
+	padding: 10px;
+	margin: 5px 20px 10px 20px;
+	position: relative;
+}
+
+/* 카트내 제품 1개 개별취소 버튼 */
+.icancel{
+	position: absolute; right: 10px; top: 8px;
+}
+
+/* 카트내 제품명 */
+.iname{
+	width: 80%;
+	height: 70px;
+}
+
+/* 카트내 제품 가격 */
+.iprice{
+	color: red;
+}
+
+/* 카트 내 버튼 구역 */
+.cartbtn{
+	display: flex;
+	position: absolute;	/* 가장 가까운 상위 요소의 포지션을 따라감 */
+	width: 100%;
+	bottom: 0px;		/* 최하단에 배치 */
+}
+
+.cartbtn button{
+	width: 50%;
+	font-size: 20px;
+	color: white;
+	border: none;
+	padding: 10px;
+}
+
+.cancelbtn{
+	background-color: black;
+}
+
+.orderbtn{
+	background-color: red;
+}
 
 
 

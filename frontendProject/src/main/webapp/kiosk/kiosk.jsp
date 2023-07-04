@@ -40,10 +40,27 @@
 			</div>	<!-- 제품구역 end -->
 			
 			<div class="cartbox">	<!-- 카트구역 -->
-			
+				<div class="cartcontent">	<!-- 제품개수/가격, 제품정보 출력 -->
+					<div class="carttop">	<!-- 제품개수/가격 구역 -->
+						<div>카트 <span class="ccount">3</span></div>
+						<div>총 주문금액 <span class="ctotal">31,000원</span></div>
+					</div>
+					<div class="cartbottom">	<!-- 제품정보 출력 구역 -->
+						<!-- 카트내 제품 1개 -->
+						<div class="citem">
+							<div class="iname">더블비프불고기버거</div>	<!-- 제품명 -->
+							<div class="iprice">12,000원</div>	<!-- 제품가격 -->
+							<span class="icancel">x</span>	<!-- 제품 개별취소 -->
+						</div>	<!-- 제품 1개 end -->
+					</div>	<!-- 제품정보 출력 구역 end -->
+					
+				</div>	<!-- 제품개수/가격, 제품정보 출력 end-->
 				
-			
-			</div>	<!-- 카투구역 end -->
+				<div class="cartbtn">	<!-- 버튼 구역 -->
+					<button class="cancelbtn">취소하기</button>
+					<button class="orderbtn">주문하기</button>
+				</div>	<!-- 버튼 구역 end -->
+			</div>	<!-- 카트구역 end -->
 			
 			
 		</div><!-- 본문 end -->
