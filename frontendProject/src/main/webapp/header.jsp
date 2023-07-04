@@ -6,7 +6,7 @@
 	</head>
 
 
-	<h4>헤더입니다.</h4>
+	
 	<ul class="headmenu">	<!-- 메뉴 -->
 		<li><a href="/frontendProject/index.jsp">home</a></li>	<!-- a태그를 이용한 링크(다른페이지로 이동) -->
 		<li><a href="/frontendProject/kiosk/kiosk.jsp">키오스크</a></li>	<!-- a태그를 이용한 링크(다른페이지로 이동) -->

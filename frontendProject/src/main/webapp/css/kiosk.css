@@ -4,8 +4,7 @@
 .kioskwrap{
 	font-family: 'MBC1961GulimM';	/* 외부폰트 */
 	width: 700px;	height: 1000px;
-	margin: 0 auto;	/* 구역 가로 정렬 */
-	border: 1px solid red;
+	margin: 50px auto;	/* 구역 가로 정렬 */
 }
 
 /* 헤더구역의 이미지 */
@@ -14,6 +13,74 @@
 	/* object-fit: cover; 이미지가 깨졌을때 비율 맞추기*/
 	
 }
+
+/* 카테고리 */
+.categorymenu{
+	display: flex;
+	justify-content: space-around;	/* 가로 균등배치 */
+	padding-top: 2px;
+	
+}
+/* 선택이 안된 카테고리 */
+.categorymenu li{
+	color: #8e8e8e;
+}
+
+
+
+/* 선택 된 카테고리 */
+.categoryselect{
+	color: red !important;	/* 위에서 이미 속성을 사용했으므로 중복이됨 */
+	/* 
+		해결방법 
+		1. id 별도로 지정
+		2. style 속성이용
+		3. important 사용
+	 */
+	border-bottom: 3px solid red;
+	padding-bottom: 3px;
+}
+
+/* 제품들이 출력되는 구역 */
+.productbox{
+	height: 450px;	/* 생략시 기본값 auto 내용물 크기만큼 계속 늘어남 */
+	display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;	/* 만약에 자식요소들이 현재 구역보다 사이즈가 더 커지면 세로 스크롤 생성*/
+}
+
+/* 제품 한개 */
+.product{
+	width: 30%;
+	text-align: center;
+	margin: 10px 10px 30px 10px;
+}
+.product .pprice{
+	color: red;
+}
+
+.product img{
+	width: 100%;
+}
+
+/* 카트 출력 구역 */
+.cartbox{
+	height: 250px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
