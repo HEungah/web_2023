@@ -14,6 +14,10 @@
 	
 }
 
+button{
+	font-family:  'MBC1961GulimM';
+}
+
 /* 카테고리 */
 .categorymenu{
 	display: flex;
