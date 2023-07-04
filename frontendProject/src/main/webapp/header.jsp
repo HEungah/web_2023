@@ -1,20 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+
+	<head>
+		<link href="/frontendProject/css/index.css" rel="stylesheet">
+	</head>
+
 
 	<h4>헤더입니다.</h4>
-	<ul>	<!-- 메뉴 -->
+	<ul class="headmenu">	<!-- 메뉴 -->
 		<li><a href="/frontendProject/index.jsp">home</a></li>	<!-- a태그를 이용한 링크(다른페이지로 이동) -->
 		<li><a href="/frontendProject/kiosk/kiosk.jsp">키오스크</a></li>	<!-- a태그를 이용한 링크(다른페이지로 이동) -->
 		<li><a href="/frontendProject/board/list.jsp">게시판</a></li>	<!-- a태그를 이용한 링크(다른페이지로 이동) -->
 		<li><a href="/frontendProject/calendar/calendar.jsp">캘린더</a></li>	<!-- a태그를 이용한 링크(다른페이지로 이동) -->
 	</ul>
+	
+	<!-- JS 호출 -->
+	<script src="/frontendProject/js/index.js"></script>
 	
 	<!-- 
 		HTTP 상태 404 - 찾을 수 없음

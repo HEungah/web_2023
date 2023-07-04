@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* 키오스크 전체구역 */
+.kioskwrap{
+	font-family: 'MBC1961GulimM';	/* 외부폰트 */
+	width: 700px;	height: 1000px;
+	margin: 0 auto;	/* 구역 가로 정렬 */
+	border: 1px solid red;
+}
+
+/* 헤더구역의 이미지 */
+.himg{
+	width: 100%;
+	/* object-fit: cover; 이미지가 깨졌을때 비율 맞추기*/
+	
+}
+
+
+
+
+
+
+
+
+
+
