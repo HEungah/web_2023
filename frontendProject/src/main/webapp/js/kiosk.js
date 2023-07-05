@@ -21,7 +21,14 @@ let burgerList = [
 
 	// 카트(장바구니) 배열/ 선택 버거들이 저장되는 배열
 	// 버거의 식별키를 저장
-let cartList = []	
+let cartList = [];	
+	// 주문(주문내역)배열
+	/*
+		주문{주문번호 : , 주문날짜 : , 결제금액 : , 주문내역 : [], 상태 : 0[주문요청], 1[주문완료], 2[주문취소]}
+	*/
+let orderList = [
+	{ono : 1, date : '2023-07-05 13:32:28', pay : 30000, products : [0, 0, 2], state : 1}
+];
 
 
 
@@ -117,9 +124,83 @@ function productSelect(productNo){	// 어떤 제품을 카트에 담아야 하�
 	// 선택된 버거의 식별키를 배열에 저장[ 버거의 모든 정보를 저장할 필요가 없음]
 	cartList.push(productNo); console.log(cartList);
 	
+	cartPrint();
 }
 
+// 6. 카트내 버거들을 출력 함수
+function cartPrint(){	// 인수 없음
+	let cartbottom = document.querySelector('.cartbottom');
+	let html = ``;
+	let total = 0;		// 버거들의 가격 총액을 저장하는 변수
+	
+	for(let i = 0; i < cartList.length; i++){
+		html += `
+				<div class="citem">
+					<div class="iname">${burgerList[cartList[i]].name}</div>
+					<div class="iprice">${burgerList[cartList[i]].price}원</div>
+					<span onclick="productCancle(${i})" class="icancel">x</span>
+				</div>
+				`
+		total += burgerList[cartList[i]].price;		
+	}
+	
+	cartbottom.innerHTML = html;
+	// 카트내 제품 수
+	document.querySelector('.ccount').innerHTML = `${cartList.length}`;
+	// 카트내 제품 총액
+	document.querySelector('.ctotal').innerHTML = `${total.toLocaleString()}원`;
+	// 만약에 카트내 제품이 많아서 가로 스크롤이 생성되었을때 자동으로 스크롤을 가장 오른쪽에 위치시킴
+	cartbottom.scrollLeft = 10000;
+	
+}
 
+// 7. 카트내 버거 부분 취소 함수[실행조건 : 카트내 상품의 x를 클릭했을때]
+function productCancle(cartNo){ // 어떤 제품을 취소해야 하는지
+	cartList.splice(cartNo, 1);
+	
+	cartPrint();
+}
+
+// 8. 카트내 버거 전체 취소 함수[실행조건 : 취소하기 버튼을 클릭했을때, 주문이 완료되었을때,]
+function cartCancel(){	// 인수 없음
+	cartList.splice(0); // cartList 배열의 모든 요소를 삭제
+	
+	cartPrint();
+}
+
+// 9. 주문완료 함수[실행조건 : 주문하기 버튼을 클릭했을때]
+function productOrder(){	// 인수 없음
+	if(cartList.length == 0){
+		alert('상품을 선택해주세요.');
+		return;
+	}
+	// 주문번호 만들기
+	let orderNum = orderList[orderList.length-1].ono;
+	// 카트에 있던 제품 인덱스를 새로운 배열에 저장
+	let products = [];
+	let totalprice = 0;
+	for(let i = 0; i < cartList.length; i++){
+		products.push(cartList[i]);	// i 번째 제품을 새로운 배열에 저장
+		totalprice += burgerList[cartList[i]].price;
+	}
+	
+	// 1. 주문객체 생성
+	let order = {
+		ono : orderNum+1,			// 주문번호 생성해서 저장
+		date : new Date(),		// 현재 날짜/시간을 구해주는 함수 이용해서 자동생성
+		pay : totalprice,				// 제품들의 총 가격
+		products : products,	// 카트에 있던 모든 제품들
+		state : 0 				// 주문객체 생성시 '주문요청'으로 초기로 사용
+	}
+	
+	// 2. 주문배열에 저장하기
+	orderList.push(order);
+	
+	// 카트 취소(전체취소함수 재호출)
+	cartCancel();
+	// 주문 리스트 확인
+	console.log(orderList);
+} // 주문완료 함수 end
 
 
 
