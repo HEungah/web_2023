@@ -23,8 +23,6 @@ function boardPrint(){
 					<td>${board.date}</td><td>${board.view}</td><td>${board.like}</td>
 				</tr>		
 				`
-		
-		
 	}	
 	
 	tcontent.innerHTML = html;
