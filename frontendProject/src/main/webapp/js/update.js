@@ -35,7 +35,7 @@ function onView(){
 	
 }// f end
 
-
+// 수정된 게시물을 리스트에 저장
 function onUpdate(){
 	console.log('onUpdate 함수 실행');
 	

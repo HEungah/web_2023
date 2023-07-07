@@ -33,7 +33,7 @@
 		<div class="row justify-content-md-end g-3">
 			<div class="col-1"><input onclick="onWrite()" class="form-control btn btn-secondary" type="button" value="등록"></div>
 			<div class="col-1"><input class="form-control btn btn-secondary" type="button" value="다시쓰기"></div>
-			<div class="col-1"><input class="form-control btn btn-secondary" type="button" value="목록보기"></div>
+			<div class="col-1"><a href="list.jsp"><input class="form-control btn btn-secondary" type="button" value="목록보기"></a></div>
 		</div>
 	</div>
 	<%@include file="../footer.jsp" %>

@@ -32,7 +32,18 @@ function boardPrint(){
 // 2. 게시물 상세페이지로 이동[실행조건 : 클릭한 게시물 제목]
 function onViewLoad(no){
 	console.log('현재 클릭한 게시물의 번호 -> ' + no);
-	// 클릭된 결과를 다른페이지로 옮기는 방법
+	// 조회수 증가 알고리즘
+	for(let i = 0; i < boardList.length; i++){
+		let b = boardList[i];
+		if(b.no == no){
+			boardList[i].view++;
+			// 만약에 세션/쿠키 사용중 이라면 ...업데이트
+			localStorage.setItem('boardList', JSON.stringify(boardList));
+			break;
+		}
+	}
+	
+	
 	sessionStorage.setItem('no',no);
 	// 페이지 이동
 	location.href="view.jsp";
