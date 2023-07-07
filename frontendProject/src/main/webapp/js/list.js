@@ -1,5 +1,4 @@
 console.log('list.js 실행');
-console.log('왜 안돼');
 
 // 1. 쿠키에 있는 배열 호출 [ 페이지[JS] 열리면]
 
@@ -25,7 +24,6 @@ function boardPrint(){
 				</tr>		
 				`
 	}	
-	console.log('왜 안돼');
 	
 	tcontent.innerHTML = html;
 	

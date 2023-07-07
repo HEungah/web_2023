@@ -11,9 +11,34 @@
 
 </head>
 <body>
+	<!-- 
+		부트스트랩 class
+			container
+			text-center
+			row
+			justify-content-md-center
+			form-control btn btn-secondary
+			m
+			p
+			
+	
+	 -->
+
+
+
 	<%@include file="../header.jsp" %>
 	<div class="container">
+		<h4 class="title text-center mt-5 mb-2">게시물 제목 출력 구역</h4>
+		<p class="writerdate text-center" style="font-size: 13px;"> 작성자와 작성일 출력되는 구역</p>
+		<div class="row justify-content-md-center">
+			<div class="content col-8" style="min-height: 500px;">게시물 내용이 출력되는 구역</div>
+		</div>
 		
+		<div class="row justify-content-md-end g-3">
+			<div class="col-1"><input onclick="onDelete()" class="form-control btn btn-secondary" type="button" value="삭제하기"></div>
+			<div class="col-1"><input onclick="modifyContent()" class="form-control btn btn-secondary" type="button" value="수정하기"></div>
+			<div class="col-1"><a href="list.jsp"><input class="form-control btn btn-secondary" type="button" value="목록보기"></a></div>
+		</div>
 	</div>
 	
 
