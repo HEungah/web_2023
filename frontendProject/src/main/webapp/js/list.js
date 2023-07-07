@@ -1,4 +1,5 @@
 console.log('list.js 실행');
+console.log('왜 안돼');
 
 // 1. 쿠키에 있는 배열 호출 [ 페이지[JS] 열리면]
 
@@ -19,17 +20,37 @@ function boardPrint(){
 		let board = boardList[i];
 		html += `
 				<tr>
-					<td>${board.no}</td><td>${board.title}</td><td>${board.writer}</td>
+					<td>${board.no}</td><td onclick="onViewLoad(${board.no})">${board.title}</td><td>${board.writer}</td>
 					<td>${board.date}</td><td>${board.view}</td><td>${board.like}</td>
 				</tr>		
 				`
 	}	
+	console.log('왜 안돼');
 	
 	tcontent.innerHTML = html;
 	
-	
-	
+}	// f end
+
+// 2. 게시물 상세페이지로 이동[실행조건 : 클릭한 게시물 제목]
+function onViewLoad(no){
+	console.log('현재 클릭한 게시물의 번호 -> ' + no);
+	// 클릭된 결과를 다른페이지로 옮기는 방법
+	sessionStorage.setItem('no',no);
+	// 페이지 이동
+	location.href="view.jsp";
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
