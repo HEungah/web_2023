@@ -47,15 +47,15 @@ function calPrint(){
 			<div class="week"> 금 </div>
 			<div class="week"> 토 </div>
 			`
-	//**** 현재 달력 1일의 요일까지 공백 출력
+	// **** 현재 달력 1일의 요일까지 공백 출력
 	for(let b = 1; b <=sweek; b++){// 1부터 1일까지의 공백 구역 출력
 		html += `<div></div>`
 	}		
-			
+	// **** 날짜 출력	
 	for(let day = 1; day <=eDay; day++){
-		html += `<div> ${day} </div>`
+		html += `<div onclick="openModal()"> ${day} </div>`
 	}
-	
+	// **** 마지막일 부터 남은 요일까지 공백 출력
 	for(let e = 1; e <= 6-dweek; e++){
 		html += `<div></div>`
 	}		
@@ -88,7 +88,15 @@ function onNext( check ){
 	
 }
 
+// 3. 모달 열기	[날짜를 클릭했을때 실행]
+function openModal(){
+	document.querySelector('.modalwrap').style.display = 'flex';
+}
 
+// 4. 모달 닫기	[닫기 버튼을 클릭했을때 실행]
+function closeModal(){
+	document.querySelector('.modalwrap').style.display = 'none';
+}
 
 
 
