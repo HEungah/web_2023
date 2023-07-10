@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+*{padding: 0px; margin: 0px;}
+
+.wrap{
+	width: 1200px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.caltop{
+	display: flex;	/* 하위요소 가로 정렬 */
+	justify-content: center;
+}
+
+/* 상단메뉴 버튼 두개 */
+.caltop button{
+	background-color: white;
+	border: none;
+	font-size: 25px;
+	color: purple;
+	cursor: pointer;	/* 커서(마우스) 모형 */
+}
+
+.caltop h3{
+	margin: 0 15px;
+	color: purple;
+}
+
+/* 캘린더(달력) 구역 */
+.calendar{
+	display: flex;
+	flex-wrap: wrap;	/* 하위 요소의 사이즈가 부족할때 자동 줄바꿈 */
+	margin-top: 30px;
+}
+
+/* 캘린더(달력) 하나의 구역 */
+.calendar div{
+	width: 14%;
+	border: 1px solid #eeeeee;
+	height: 100px;
+}
+
+/* 월~토 */
+.week{
+	height: 30px !important;	/* css 속성이 겹쳤을때 최우선순위를 줌 */
+	background-color: #e8e8e8;
+	font-size: 18px;
+	text-align: center;
+}
+
+/* 일요일 */
+.sunday{
+	background-color: red;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
