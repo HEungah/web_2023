@@ -75,6 +75,19 @@
 	border-radius: 30px;
 }
 
+.content{
+	background-color: red;
+	border: 1px solid #eeeeee;
+	color: white;
+	padding: 5px; margin: 3px;
+	font-size: 10px;
+	display: block;
+	/* 만약에 해당 구역보다 내용물이 더 커지면 ...으로 표기*/
+	overflow: hidden;	/* 넘치면 넘치는 부분을 숨김 */
+	white-space: nowrap;	/* 만약에 텍스트가 커지면 자동 줄바꿈을 해제시킴 */
+	text-overflow: ellipsis;	/* ...으로 생략시킴 */
+	
+}
 
 
 
