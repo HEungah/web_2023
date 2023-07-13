@@ -20,8 +20,19 @@ public class Test03 {
 		Scanner sc = new Scanner(System.in);
 		
 		String text = sc.nextLine();
+		StringBuilder sb = new StringBuilder(text);
 		
+		// 입력받은 문자열을 모두 대문자로 변환
 		
+		for (int i = 0; i < text.length(); i++) {
+			if ((int)text.charAt(i) <= 122 && (int)text.charAt(i) >= 97) {
+				char chStr = (char)((int)text.charAt(i) - 32);
+				sb.setCharAt(i, chStr);
+				text = sb.toString();
+			}
+		}
+		
+		System.out.println(text);
 	}
 
 }
