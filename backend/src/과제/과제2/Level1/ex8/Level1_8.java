@@ -16,7 +16,55 @@ public class Level1_8 {
 		String output = "";
 		
 		/* 문제풀이 위치 */
+		System.out.printf("[1]작성자 : ");
+		output = sc.nextLine();
+		boardlist += " 1\t " + output + "\t";
+		System.out.printf("[1]방문록 : ");
+		output = sc.nextLine();
+		boardlist += output + "\n";
+		System.out.println(header);
+		System.out.println(boardlist);
+		System.out.println(footer);
 		
+		System.out.printf("[2]작성자 : ");
+		output = sc.nextLine();
+		boardlist += " 2\t " + output + "\t";
+		System.out.printf("[2]방문록 : ");
+		output = sc.nextLine();
+		boardlist += output + "\n";
+		System.out.println(header);
+		System.out.println(boardlist);
+		System.out.println(footer);
+		
+		System.out.printf("[3]작성자 : ");
+		output = sc.nextLine();
+		boardlist += " 3\t " + output + "\t";
+		System.out.printf("[3]방문록 : ");
+		output = sc.nextLine();
+		boardlist += output + "\n";
+		System.out.println(header);
+		System.out.println(boardlist);
+		System.out.println(footer);
+		
+		System.out.printf("[4]작성자 : ");
+		output = sc.nextLine();
+		boardlist += " 4\t " + output + "\t";
+		System.out.printf("[4]방문록 : ");
+		output = sc.nextLine();
+		boardlist += output + "\n";
+		System.out.println(header);
+		System.out.println(boardlist);
+		System.out.println(footer);
+		
+		System.out.printf("[5]작성자 : ");
+		output = sc.nextLine();
+		boardlist += " 5\t " + output + "\t";
+		System.out.printf("[5]방문록 : ");
+		output = sc.nextLine();
+		boardlist += output + "\n";
+		System.out.println(header);
+		System.out.println(boardlist);
+		System.out.println(footer);
 		/* ----------- */
 	}
 }

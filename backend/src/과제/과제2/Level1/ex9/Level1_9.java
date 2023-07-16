@@ -18,7 +18,34 @@ public class Level1_9 {
 		System.out.println("국어\t영어\t수학\t합계\t평균\t3배수\t8배수\t홀짝\t결과");
 		
 		/* 문제풀이 위치 */
-
+		int sum = kor + eng + mat;
+		double avg = sum / 3;
+		boolean three = true;
+		
+		if(sum % 3 == 0) {
+			three = true;
+		}else {three = false;}
+		
+		boolean eight = true;
+		
+		if(sum % 8 == 0) {
+			eight = true;
+		}else {eight = false;}
+		
+		String number = "홀수";
+		
+		if(sum % 2 == 0) {
+			number = "짝수";
+		}else {number = "홀수";}
+		
+		String result = "탈락";
+		
+		if(sum >= 65) {
+			result = "합격";
+		}else {result = "탈락";}
+		System.out.printf("%d\t%d\t%d\t%d\t%.1f\t%b\t%b\t%s\t%s"
+				,kor, eng, mat, sum, avg, three, eight, number, result);
+		
 		/* ----------- */
 	}
 }

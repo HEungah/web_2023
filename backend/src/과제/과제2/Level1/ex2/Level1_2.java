@@ -11,6 +11,26 @@ public class Level1_2 {
 		System.out.println("-------------------------------------------------------------");
 		/* 문제풀이 위치 */
 		
+		boolean a = true;
+		byte b = 100;
+		char c = 'A';
+		short d = 30000;
+		int f = 2000000000;
+		long g = 40000000000l;
+		float h = 3.1231232f;
+		double i = 3.123123123;
+		
+		System.out.printf("%-10s   %15b   %30s\n", "boolean", a, "true or false");
+		System.out.printf("%-10s   %15d   %30s\n", "byte", b, "-128 ~ 127");
+		System.out.printf("%-10s   %15s   %30s\n", "char", c, "0~65535[ character 1 ]");
+		System.out.printf("%-10s   %15d   %30s\n", "short", d, "-32768 ~ 32767");
+		System.out.printf("%-10s   %15d   %30s\n", "int", f, "-+2000 million");
+		System.out.printf("%-10s   %15d   %30s\n", "long", g, "-+2000 million Excess");
+		System.out.printf("%-10s   %15.3f   %30s\n", "float", h, "8 decimal places");
+		System.out.printf("%-10s   %15.8f   %30s\n", "double", i, "17 decimal places");
+
+		
+		
 		/* ----------- */
 	}
 }
