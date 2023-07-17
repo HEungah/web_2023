@@ -22,27 +22,19 @@ public class Level1_9 {
 		double avg = sum / 3;
 		boolean three = true;
 		
-		if(sum % 3 == 0) {
-			three = true;
-		}else {three = false;}
+		three = sum % 3 == 0 ? true : false;
 		
 		boolean eight = true;
 		
-		if(sum % 8 == 0) {
-			eight = true;
-		}else {eight = false;}
+		eight = sum % 8 == 0 ? true : false;
 		
 		String number = "홀수";
 		
-		if(sum % 2 == 0) {
-			number = "짝수";
-		}else {number = "홀수";}
+		number = sum % 2 == 0 ? "짝수" : "홀수";
 		
 		String result = "탈락";
 		
-		if(sum >= 65) {
-			result = "합격";
-		}else {result = "탈락";}
+		result = sum >= 65 ? "합격" : "탈락";
 		System.out.printf("%d\t%d\t%d\t%d\t%.1f\t%b\t%b\t%s\t%s"
 				,kor, eng, mat, sum, avg, three, eight, number, result);
 		

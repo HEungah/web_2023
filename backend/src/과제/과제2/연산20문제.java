@@ -60,55 +60,33 @@ public class 연산20문제 {
 		
 		int num2 = sc.nextInt();
 		
-		if(num2 % 7 == 0) {
-			System.out.println("O");
-		}else {
-			System.out.println("X");
-		}
+		num2 % 7 == 0 ? System.out.println("O") : System.out.println("X");;
 		
 		//------ 문제6 여기에 풀이-------//
 		
 		int num3 = sc.nextInt();
 		
-		if(num3 % 2 == 0) {
-			System.out.println("X");
-		}else {
-			System.out.println("O");
-		}
+		num3 % 2 == 0 ? System.out.println("X") : System.out.println("O");
 		
 		//------ 문제7 여기에 풀이-------//
 		
 		int num4 = sc.nextInt();
 		
-		if(num4 % 2 == 0 && num4 % 7 == 0) {
-			System.out.println("O");
-		}else {
-			System.out.println("X");
-		}
+		num4 % 2 == 0 && num4 % 7 == 0 ? System.out.println("O") : System.out.println("X");
 		
 		
 		//------ 문제8 여기에 풀이-------//
 		
 		int num5 = sc.nextInt();
 		
-		if(num5 % 2 == 1 || num5 % 7 == 0) {
-			System.out.println("O");
-		}else {
-			System.out.println("X");
-		}
+		num5 % 2 == 1 || num5 % 7 == 0 ? System.out.println("O") : System.out.println("X");
 		
 		//------ 문제9 여기에 풀이-------//
 		
 		int num6 = sc.nextInt();
 		int num7 = sc.nextInt();
 		
-		if(num6 > num7) {
-			System.out.println(num6);
-		}else if(num6 < num7) {
-			System.out.println(num7);
-		}else {
-			System.out.println("두 수의 크기가 같습니다.");
-		}
+		num6 > num7 ? System.out.println(num6) : System.out.println(num7);
 		
 		//------ 문제10 여기에 풀이-------//
 		
@@ -184,12 +162,8 @@ public class 연산20문제 {
 		
 		int age = sc.nextInt();
 		
-		if(age >=10 && age < 20) {
-			System.out.println("학생입니다.");
-		}else if(age >= 20 && age <40) {
-			System.out.println("성인입니다.");
-		}else if(age >= 40) {
-			System.out.println("중년입니다.");
+		age >=10 && age < 20 ? System.out.println("학생입니다.") : age >= 20 && age <40) ?
+			System.out.println("성인입니다.") : System.out.println("중년입니다.");
 		}
 		
 		//------ 문제19 여기에 풀이-------//
@@ -208,26 +182,18 @@ public class 연산20문제 {
 		String id = sc.nextLine();
 		String pw = sc.nextLine();
 		
-		if(id.equals("admin") && pw.equals("1234")) {
-			System.out.println("로그인 성공");
-		}else {
-			System.out.println("로그인 실패");
-		}
+		id.equals("admin") && pw.equals("1234") ? System.out.println("로그인 성공") : System.out.println("로그인 실패");
+		
 		
 		//------ 문제21 여기에 풀이-------//
 		
-		int[] num = new int[3];
+		int number1 = sc.nextInt();
+		int number2 = sc.nextInt();
+		int number3 = sc.nextInt();
 		int max = 0;
 		
-		for(int i = 0; i < num.length; i++) {
-			num[i] = sc.nextInt();
-		}
-		
-		for(int i = 0; i < num.length; i++) {
-			if(num[i] > max) {
-				max = num[i];
-			}
-		}
+		max = number1 > number2 ? number1 : number2 > number3 ? number2 : number3;
+		max = number1 > number3 ? number1 : number3;
 		
 		System.out.println("가장 큰수는 " + max + "입니다.");
 		
