@@ -141,7 +141,7 @@ public class Ex1_조건문 {
 				break;
 			case 'B':	
 			case 'b':
-				System.out.println("일반 회웝입니다.");
+				System.out.println("일반 회원입니다.");
 				break;
 			default:
 				System.out.println("손님입니다.");
