@@ -22,41 +22,41 @@ public class Test04 {
 		String word = sc.nextLine();
 		int result = word.length();
 		
-		if(word.contains("z=")) {
-			if(word.contains("dz=")) {
-				result -= 2;
-			}else {
+		while(true) {
+		
+			if(word.contains("z=")) {
+				if(word.contains("dz=")) {
+					word = word.substring(0, word.indexOf("dz=")) + " " +  word.substring(word.indexOf("dz=") + 3);
+					result -= 2;
+				}else {
+					word = word.substring(0, word.indexOf("z=")) +  " " +  word.substring(word.indexOf("z=") + 2);
+					result -= 1;
+				}
+			}else if(word.contains("c=")) {
+				word = word.substring(0, word.indexOf("c=")) +  " " +  word.substring(word.indexOf("c=") + 2);
 				result -= 1;
-			}
+			}else if(word.contains("c-")) {
+				word = word.substring(0, word.indexOf("c-")) +  " " +  word.substring(word.indexOf("c-") + 2);
+				result -= 1;
+			}else if(word.contains("d-")) {
+				word = word.substring(0, word.indexOf("d-")) +  " " +  word.substring(word.indexOf("d-") + 2);
+				result -= 1;
+			}else if(word.contains("lj")) {
+				word = word.substring(0, word.indexOf("lj")) +  " " +  word.substring(word.indexOf("lj") + 2);
+				result -= 1;
+			}else if(word.contains("nj")) {
+				word = word.substring(0, word.indexOf("nj")) + " " +  word.substring(word.indexOf("nj") + 2);
+				result -= 1;
+			}else if(word.contains("s=")) {
+				word = word.substring(0, word.indexOf("s=")) +  " " +  word.substring(word.indexOf("s=") + 2);
+				result -= 1;
+			}else if(word.contains("z=")) {
+				word = word.substring(0, word.indexOf("z=")) +  " " +  word.substring(word.indexOf("z=") + 2);
+				result -= 1;
+			}else {break;}
+			
 		}
-		
-		if(word.contains("c=")) {
-			result -= 1;
-		}
-		
-		if(word.contains("c-")) {
-			result -= 1;
-		}
-		
-		if(word.contains("d-")) {
-			result -= 1;
-		}
-		
-		if(word.contains("lj")) {
-			result -= 1;
-		}
-		
-		if(word.contains("nj")) {
-			result -= 1;
-		}
-		
-		if(word.contains("z=")) {
-			result -= 1;
-		}
-		
 		System.out.println(result);
-		
-		
 		
 	}
 
