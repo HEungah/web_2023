@@ -43,15 +43,15 @@ public class 과제4_3_키오스크 {
 				}
 			}else if(ch == 4) {
 				System.out.println("------------장바구니-------------");
-				System.out.println("제품명	수량  가격");
+				System.out.println("제품명	수량	가격");
 				if(콜라바구니 > 0) {
-					System.out.println("콜라	" + 콜라바구니 +"  " + 콜라바구니*콜라가격);
+					System.out.println("콜라	" + 콜라바구니 +"	" + 콜라바구니*콜라가격);
 				}
 				if(환타바구니 > 0) {
-					System.out.println("환타	" + 환타바구니 +"  " + 환타바구니*환타가격);
+					System.out.println("환타	" + 환타바구니 +"	" + 환타바구니*환타가격);
 				}
 				if(사이다바구니 > 0) {
-					System.out.println("사이다	" + 사이다바구니 +"  " + 사이다바구니*사이다가격);
+					System.out.println("사이다	" + 사이다바구니 +"	" + 사이다바구니*사이다가격);
 				}
 				int payment = (콜라바구니*콜라가격) + (환타바구니*환타가격) + (사이다바구니*사이다가격);
 				System.out.println("총가격 : " + payment);
