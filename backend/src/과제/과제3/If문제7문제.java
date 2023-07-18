@@ -28,21 +28,12 @@ public class If문제7문제 {
 		num2 = sc.nextInt();
 		System.out.printf("(문제2)세번째 수 입력 => ");
 		int num3 = sc.nextInt();
-		int max = 0;
+		int max = 0;	// max 임시변수 사용
 		
-		if(num > num2) {
-			if(num > num3) {
-				max = num;
-			}else {
-				max = num3;
-			}
-		}else {
-			if(num2 > num3) {
-				max = num2;
-			}else {
-				max = num3;
-			}
-		}
+		max = num;
+		if(max < num2) {max = num2;}
+		if(max < num3) {max = num3;}
+		
 		System.out.println("가장 큰 수 => " + max);
 		
 		/* -------문제3----- */
@@ -52,42 +43,16 @@ public class If문제7문제 {
 		num2 = sc.nextInt();
 		System.out.printf("(문제3)세번째 수 입력 => ");
 		num3 = sc.nextInt();
+		int temp = 0;
 		
-		if(num > num2) {
-			if(num > num3) {
-				max = num;
-			}else {
-				max = num3;
-			}
-		}else {
-			if(num2 > num3) {
-				max = num2;
-			}else {
-				max = num3;
-			}
-		}
+		// 조건이 충족하면 서로 자리 변경
+		if(num > num2) {temp = num; num = num2; num2 = temp;}
+		if(num > num3) {temp = num; num = num3; num3 = temp;}
+		if(num2 > num3) {temp = num2; num2 = num3; num3 = temp;}
 		
-		int mid = 0;
-		int min = 0;
+		System.out.println("오름차순 정렬 => " + num + " " + num2 + " " + num3);
+		System.out.println("내림차순 정렬 => " + num3 + " " + num2 + " " + num);
 		
-		if(num < num2) {
-			if(num < num3) {
-				min = num;
-			}else {
-				min = num3;
-			}
-		}else {
-			if(num2 < num3) {
-				min = num2;
-			}else {
-				min = num3;
-			}
-		}
-		
-		mid = (num + num2 + num3) - (max + min);
-		
-		System.out.println("오름차순 정렬 => " + max + " " + mid + " " + min);
-		System.out.println("내림차순 정렬 => " + min + " " + mid + " " + max);
 		
 		/* -------문제4----- */
 		System.out.printf("(문제4)점수를 입력하세요 => ");
