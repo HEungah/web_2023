@@ -15,16 +15,31 @@ public class Level3_3 {
 		int july4 = 11738700;
 		
 		/* 문제풀이 위치 */
-		int[] array = {july1, july2, july3, july4};
 		System.out.println("-------- 7월 매출액 --------");
-		for(int i = 0; i < array.length; i++) {
-			System.out.printf("%d주차 : ",i+1);
-			for(int j = 0; j < array[i]/1000000; j++) {
-				System.out.printf("■");
-			}
-			System.out.printf("%d만원\n", array[i]/10000);
-			
+		System.out.printf("1주차 : ");
+		for(int j = 0; j < july1/1000000; j++) {
+			System.out.printf("■");
 		}
+		System.out.printf("%d만원\n", july1/10000);
+		
+		System.out.printf("2주차 : ");
+		for(int j = 0; j < july2/1000000; j++) {
+			System.out.printf("■");
+		}
+		System.out.printf("%d만원\n", july2/10000);
+		
+		System.out.printf("3주차 : ");
+		for(int j = 0; j < july3/1000000; j++) {
+			System.out.printf("■");
+		}
+		System.out.printf("%d만원\n", july3/10000);
+		
+		System.out.printf("4주차 : ");
+		for(int j = 0; j < july4/1000000; j++) {
+			System.out.printf("■");
+		}
+		System.out.printf("%d만원\n", july4/10000);
+
 		
 		/* ----------- */
 	}
