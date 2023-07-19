@@ -22,7 +22,8 @@ public class 과제4_2_가위바위보 {
 			
 			/* 문제풀이 위치 */
 			Random random = new Random();
-			컴퓨터 = random.nextInt(2);
+			컴퓨터 = random.nextInt(3);
+			System.out.println(컴퓨터);
 			if(플레이어 == 0) {
 				if(컴퓨터 == 0) {
 					System.out.println("무승부");

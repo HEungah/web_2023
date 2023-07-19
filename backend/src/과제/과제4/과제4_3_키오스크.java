@@ -20,21 +20,21 @@ public class 과제4_3_키오스크 {
 			System.out.print(">>>>>> 선택 : "); int ch = scanner.nextInt();
 			
 			/* 문제풀이 위치 */
-			if(ch == 1) {
+			if(ch == 1) {	// 콜라 선택
 				if(콜라재고 == 0) {
 					System.out.println("재고부족");
 				}else {
 					콜라재고--;
 					콜라바구니++;
 				}
-			}else if(ch == 2) {
+			}else if(ch == 2) {	// 환타 선택
 				if(환타재고 == 0) {
 					System.out.println("재고부족");					
 				}else {
 					환타재고--;
 					환타바구니++;
 				}
-			}else if(ch == 3) {
+			}else if(ch == 3) {	// 사이다 선택
 				if(사이다재고 == 0) {
 					System.out.println("재고부족");
 				}else {
@@ -44,14 +44,14 @@ public class 과제4_3_키오스크 {
 			}else if(ch == 4) {
 				System.out.println("------------장바구니-------------");
 				System.out.println("제품명	수량	가격");
-				if(콜라바구니 > 0) {
-					System.out.println("콜라	" + 콜라바구니 +"	" + 콜라바구니*콜라가격);
+				if(콜라바구니 > 0) {	// 콜라를 한번이상 선택했을 경우에만
+					System.out.println("콜라	 " + 콜라바구니 +"	" + 콜라바구니*콜라가격);
 				}
-				if(환타바구니 > 0) {
-					System.out.println("환타	" + 환타바구니 +"	" + 환타바구니*환타가격);
+				if(환타바구니 > 0) {	// 환타를 한번이상 선택했을 경우에만
+					System.out.println("환타	 " + 환타바구니 +"	" + 환타바구니*환타가격);
 				}
-				if(사이다바구니 > 0) {
-					System.out.println("사이다	" + 사이다바구니 +"	" + 사이다바구니*사이다가격);
+				if(사이다바구니 > 0) {	// 사이다를 한번이상 선택했을 경우에만
+					System.out.println("사이다	 " + 사이다바구니 +"	" + 사이다바구니*사이다가격);
 				}
 				int payment = (콜라바구니*콜라가격) + (환타바구니*환타가격) + (사이다바구니*사이다가격);
 				System.out.println("총가격 : " + payment);
@@ -59,7 +59,7 @@ public class 과제4_3_키오스크 {
 				System.out.printf("input >>> ");
 				ch = scanner.nextInt();
 				if(ch == 1) {
-					System.out.println("금액입력 >>> ");
+					System.out.printf("금액입력 >>> ");
 					int inputMoney = scanner.nextInt();
 					if(inputMoney >= payment) {
 						System.out.println("잔액 >>> " + (inputMoney - payment));
@@ -75,7 +75,7 @@ public class 과제4_3_키오스크 {
 						환타바구니 = 0;
 						사이다바구니 = 0;
 					}
-				}else if(ch == 2) {
+				}else{
 					System.out.println("결제를 취소하였습니다.");
 					콜라재고 += 콜라바구니;
 					환타재고 += 환타바구니;

@@ -26,6 +26,7 @@ public class 과제4_1_예출금 {
 						System.out.printf("예금액을 입력해주세요 >>> ");
 						int balanceInput = scanner.nextInt();
 						balance += balanceInput;
+						System.out.println("예금이 완료되었습니다.");
 					}else {
 						System.out.println("계좌번호가 틀렸습니다.");
 					}
@@ -44,6 +45,7 @@ public class 과제4_1_예출금 {
 								continue;
 							}
 							balance -= balanceOuput;
+							System.out.println("출금이 완료되었습니다.");
 						}else {
 							System.out.println("비밀번호가 틀렸습니다.");
 						}
@@ -53,7 +55,7 @@ public class 과제4_1_예출금 {
 				}else if(ch == 3) {
 					System.out.println("[ 예금액 : " + balance + " ]");
 				}else if(ch == 4) {
-					System.out.println("안녕히가세요");
+					System.out.println("[ 안녕히가세요 ]");
 					break;
 				}
 			}
