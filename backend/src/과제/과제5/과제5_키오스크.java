@@ -10,7 +10,23 @@ public class 과제5_키오스크 {
 		
 		String 재고관리 = "";
 		/* 재고관리 변수 샘플  */
-		재고관리 = "콜라0 300" + "환타0 200" + "사이다0 100";
+		재고관리 = "콜라,300,0,10-환타,200,0,10-사이다,100,0,10";
+		
+		String 콜라 = 재고관리.split("-")[0];
+		String 환타 = 재고관리.split("-")[1];
+		String 사이다 = 재고관리.split("-")[2];
+		
+		int 콜라바구니 = Integer.parseInt(콜라.split(",")[2]);
+		int 환타바구니 = Integer.parseInt(환타.split(",")[2]);
+		int 사이다바구니 = Integer.parseInt(사이다.split(",")[2]);
+		
+		int 콜라재고 = Integer.parseInt(콜라.split(",")[3]);
+		int 환타재고 = Integer.parseInt(환타.split(",")[3]);
+		int 사이다재고 = Integer.parseInt(사이다.split(",")[3]);
+		
+		int 콜라가격 = Integer.parseInt(콜라.split(",")[1]);
+		int 환타가격 = Integer.parseInt(환타.split(",")[1]);
+		int 사이다가격 = Integer.parseInt(사이다.split(",")[1]);
 		/* ----------- */
 		
 		while(true) {
@@ -19,59 +35,70 @@ public class 과제5_키오스크 {
 			System.out.print(">>>>>> 선택 : "); int ch = scanner.nextInt();
 			
 			/* 문제풀이 위치 */
-			
-			
-			
 			if(ch == 1) {	// 콜라 선택
-				if(재고관리.substring(재고관리.indexOf("콜라")+2, 재고관리.indexOf("콜라")+4).equals("10")) {
+				if(콜라재고 == 0) {
 					System.out.println("재고부족");
 				}else {
-					재고관리 = 재고관리.replace("콜라" + 재고관리.charAt(재고관리.indexOf("콜라")+2), "콜라" + (재고관리.charAt(재고관리.indexOf("콜라")+2)-48+1));
-					System.out.println(재고관리);
+					콜라재고--;
+					콜라바구니++;
 				}
-			}else if(ch == 2) {
-				if(재고관리.substring(재고관리.indexOf("환타")+2, 재고관리.indexOf("환타")+4).equals("10")){
+			}else if(ch == 2) {	// 환타 선택
+				if(환타재고 == 0) {
+					System.out.println("재고부족");					
+				}else {
+					환타재고--;
+					환타바구니++;
+				}
+			}else if(ch == 3) {	// 사이다 선택
+				if(사이다재고 == 0) {
 					System.out.println("재고부족");
 				}else {
-					재고관리 = 재고관리.replace("환타" + 재고관리.charAt(재고관리.indexOf("환타")+2), "환타" + (재고관리.charAt(재고관리.indexOf("환타")+2)-48+1));
-					System.out.println(재고관리);
+					사이다재고--;
+					사이다바구니++;
 				}
-			}else if(ch == 3) {
-				if(재고관리.substring(재고관리.indexOf("사이다")+3, 재고관리.indexOf("사이다")+5).equals("10")){
-					System.out.println("재고부족");
-				}else {
-					재고관리 = 재고관리.replace("사이다" + 재고관리.charAt(재고관리.indexOf("사이다")+3), "사이다" + (재고관리.charAt(재고관리.indexOf("사이다")+3)-48+1));
-					System.out.println(재고관리);
-				}
-				
 			}else if(ch == 4) {
 				System.out.println("------------장바구니-------------");
 				System.out.println("제품명	수량	가격");
-				
-				if(재고관리.substring(재고관리.indexOf("콜라")+2, 재고관리.indexOf("콜라")+4).equals("10")) {
-					System.out.printf("콜라	10	");
-					System.out.println(Integer.valueOf(재고관리.substring(5,8)) * 10);
-				}else if(재고관리.charAt(재고관리.indexOf("콜라")+2)-48 > 0){
-					System.out.printf("콜라	 %d	", 재고관리.charAt(재고관리.indexOf("콜라")+2)-48);
-					System.out.println(Integer.valueOf(재고관리.substring(4,7)) * (재고관리.charAt(재고관리.indexOf("콜라")+2)-48));
+				if(콜라바구니 > 0) {	// 콜라를 한번이상 선택했을 경우에만
+					System.out.println("콜라	 " + 콜라바구니 +"	" + 콜라바구니*콜라가격);
 				}
-				
-				if(재고관리.substring(재고관리.indexOf("환타")+2, 재고관리.indexOf("환타")+4).equals("10")) {
-					System.out.printf("환타	10	");
-					System.out.println(Integer.valueOf(재고관리.substring(12,15)) * 10);
-				}else if(재고관리.charAt(재고관리.indexOf("환타")+2)-48 > 0){
-					System.out.printf("환타	 %d	", 재고관리.charAt(재고관리.indexOf("환타")+2)-48);
-					System.out.println(Integer.valueOf(재고관리.substring(11,14)) * (재고관리.charAt(재고관리.indexOf("환타")+2)-48));
+				if(환타바구니 > 0) {	// 환타를 한번이상 선택했을 경우에만
+					System.out.println("환타	 " + 환타바구니 +"	" + 환타바구니*환타가격);
 				}
-				
-				if(재고관리.substring(재고관리.indexOf("사이다")+3, 재고관리.indexOf("사이다")+5).equals("10")) {
-					System.out.printf("사이다	10	");
-					System.out.println(Integer.valueOf(재고관리.substring(12,15)) * 10);
-				}else if(재고관리.charAt(재고관리.indexOf("사이다")+2)-48 > 0){
-					System.out.printf("사이다	 %d	", 재고관리.charAt(재고관리.indexOf("사이다")+2)-48);
-					System.out.println(Integer.valueOf(재고관리.substring(11,14)) * (재고관리.charAt(재고관리.indexOf("환타")+2)-48));
+				if(사이다바구니 > 0) {	// 사이다를 한번이상 선택했을 경우에만
+					System.out.println("사이다	 " + 사이다바구니 +"	" + 사이다바구니*사이다가격);
 				}
-				
+				int payment = (콜라바구니*콜라가격) + (환타바구니*환타가격) + (사이다바구니*사이다가격);
+				System.out.println("총가격 : " + payment);
+				System.out.println("1.결제 2.취소");
+				System.out.printf("input >>> ");
+				ch = scanner.nextInt();
+				if(ch == 1) {
+					System.out.printf("금액입력 >>> ");
+					int inputMoney = scanner.nextInt();
+					if(inputMoney >= payment) {
+						System.out.println("잔액 >>> " + (inputMoney - payment));
+						콜라바구니 = 0;
+						환타바구니 = 0;
+						사이다바구니 = 0;
+					}else {
+						System.out.println("금액이 부족합니다.");
+						콜라재고 += 콜라바구니;
+						환타재고 += 환타바구니;
+						사이다재고 += 사이다바구니;
+						콜라바구니 = 0;
+						환타바구니 = 0;
+						사이다바구니 = 0;
+					}
+				}else{
+					System.out.println("결제를 취소하였습니다.");
+					콜라재고 += 콜라바구니;
+					환타재고 += 환타바구니;
+					사이다재고 += 사이다바구니;
+					콜라바구니 = 0;
+					환타바구니 = 0;
+					사이다바구니 = 0;
+				}
 			}
 			
 			/* ----------- */
