@@ -131,6 +131,16 @@ public class Ex1_배열 {	// class s
  			3) new 연산으로 배열 생성(기본값)
  				타입[] 변수명 = new 타입[];
  				
+ 				
+ 		.nextLine() 사용시 주의할점
+ 		 * nextLine 사용시 다른 next~() 앞뒤로 존재 했을때 하나로 인식[오류처럼 보일수 있음]
+ 		 1. 해결방안1
+ 		 	Integer.parseInt(scanner.nextLine())
+ 		 2. 해결방안2
+ 		 	String 문자 = scanner.nextLine();
+ 		 	int 정수 = scanner.nextInt();
+ 		 	sanner.nextLine();  ---> 의미 없는 nextLine() 추가해서 해결
+ 		 	String 문자 = scanner.nextLine();
  */
 
 

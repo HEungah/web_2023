@@ -16,46 +16,49 @@ public class Ex2_확인문제9 {// class s
 		System.out.println("---------------------------------------------");
 		
 		System.out.printf("선택 >>> ");
-		int ch = sc.nextInt();
+		String ch = sc.nextLine();
 		
-		if(ch == 1) {	// 학생수 선택 s
+		if(ch.equals("1")) {	// 학생수 선택 s
 			System.out.printf("학생수 >>> ");
 			studentNum = sc.nextInt();
-		}else if(ch == 2){
+			sc.nextLine();
+			score = new int[studentNum];
+		}else if(ch.equals("2")){
 			if(studentNum < 1) {
 				System.out.println("학생수를 입력해주세요.");
 				continue;
 			}
-			for(int i=0; i < studentNum; i++) {
+			for(int i=0; i < score.length; i++) {  
 				System.out.printf("scores[" + i + "] >>> ");
 				score[i] = sc.nextInt();
 			}
-		}else if(ch == 3) {
+			sc.nextLine();
+		}else if(ch.equals("3")) {
 			if(studentNum < 1) {
 				System.out.println("점수를 입력해주세요.");
 				continue;
 			}
-			for(int i=0; i < studentNum; i++) {
+			for(int i=0; i < score.length; i++) {
 				System.out.printf("scores[" + i + "] : " + score[i] + "\n");
 			}
-		}else if(ch == 4) {
-			int max = 0;
-			int sum = 0;
-			double avg = 0;
+		}else if(ch.equals("4")) {
+			int max = 0;	// 최고 점수를 저장하는 변수
+			int sum = 0;	// 모든 학생들의 점수의 합계를 저장하는 변수
+			double avg = 0;	// 학생들의 평균 점수를 저장하는 변수
 			if(studentNum < 1) {
 				System.out.println("점수를 입력해주세요.");
 				continue;
 			}
-			for(int i=0; i < studentNum; i++) {	// for s
+			for(int i=0; i < score.length; i++) {	// for s
 				if(score[i] > max) {
 					max = score[i];
 				}
 				sum += score[i];
 			}	// for e
-			avg = (double)sum / (double)studentNum;
+			avg = (double)sum / (double)score.length;
 			System.out.println("최고 점수  : " + max);
 			System.out.println("평균 점수  : " + avg);
-		}else if(ch == 5) {
+		}else if(ch.equals("5")) {
 			System.out.println("[ 프로그램종료 ]");
 			break;
 		}else {
@@ -70,3 +73,4 @@ public class Ex2_확인문제9 {// class s
 	}	// main e
 
 }	// class e
+
