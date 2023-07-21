@@ -93,7 +93,7 @@ public class Ex1_파일처리 {
 		String 관광지파일정보 = new String(관광지파일바이트배열, "EUC-KR");
 //		String 관광지파일정보 = new String(관광지파일바이트배열, "UTF-8");
 		
-		System.out.println(관광지파일정보);
+		System.out.println(관광지파일정보.split("\n")[7]);
 		// 한글 인코딩(번역) 방법 대표적으로 2가지 : UTF-8, EUC-KR
 
 		
