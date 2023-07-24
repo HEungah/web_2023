@@ -1,6 +1,5 @@
 package java1.day08.Ex5;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ex5_객체배열 {
