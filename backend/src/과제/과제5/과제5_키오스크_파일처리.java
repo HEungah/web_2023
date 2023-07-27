@@ -54,7 +54,7 @@ public class 과제5_키오스크_파일처리 {
 			
 			if(ch == 1) {
 				for(int i = 0; i<재고관리.length; i++) {
-					String product = 재고관리[i];	
+					String product = 재고관리[i];
 					String name = product.split(",")[0];	// 제품명
 					int stock = Integer.parseInt(product.split(",")[1]);		// 재고
 					int price = Integer.parseInt(product.split(",")[2]);		// 가격
@@ -109,7 +109,7 @@ public class 과제5_키오스크_파일처리 {
 				for(int i = 0; i<재고관리.length; i++) {
 					int basket = Integer.parseInt(재고관리[i].split(",")[3]);
 					int price = Integer.parseInt(재고관리[i].split(",")[2]);
-					String name = (i == 0) ? "콜라" : (i == 1) ? "환타" : "사이다";
+					String name = 재고관리[i].split(",")[0];
 					if(basket > 0) { // 바구니에 재품이 있는겨우만 출력
 						System.out.printf("%s \t\t%s \t\t%s",name, basket, basket*price);
 					}
