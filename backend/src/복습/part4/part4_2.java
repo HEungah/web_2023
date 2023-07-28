@@ -7,10 +7,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class part4 {
+public class part4_2 {
 	public static void main(String[] args) throws IOException {
 		
-		Scanner sc = new Scanner(System.in);
+Scanner sc = new Scanner(System.in);
 		
 		while(true) {
 			
@@ -33,14 +33,14 @@ public class part4 {
 	    	int ch = sc.nextInt();
 	    	
 	    	if(ch == -1) {
-	    		System.out.print("제품 이름 >>> "); String Pname = sc.next();
-	    		System.out.print("초기 재고 >>> "); int 재고 = sc.nextInt();
-	    		System.out.print("제품 가격 >>> "); int price = sc.nextInt();
+	    		System.out.print("제품이름 >>> "); String Pname = sc.next();
+	    		System.out.print("초기재고 >>> "); int 재고 = sc.nextInt();
+	    		System.out.print("제품가격 >>> "); int price = sc.nextInt();
 	    		int basket = 0;
 	    		
 	    		String outStr = Pname +"," + 재고 + "," + basket + "," + price + "\n";
 	    		fileOutputStream.write(outStr.getBytes());
-	    		System.out.println("제품이 등록되었습니다.");
+	    		System.out.println("제품등록 완료");
 	    	}	// if end
 	    	
 	    	else if(ch == 0) {
@@ -52,7 +52,7 @@ public class part4 {
 	    			if(바구니 > 0) {
 	    				System.out.println(name + "\t" + 바구니 + "\t" + (바구니*가격));
 	    			}
-	    		}	// for end
+	    		}
 	    		
 	    	}else if(ch == 1) {
 	    		for(int i = 0; i < 재고관리.length; i++) {
@@ -63,7 +63,7 @@ public class part4 {
 	    			}else{
 	    				System.out.println((i+1) + ". " + name + "[재고없음]");
 	    			}
-	    		}	// for end
+	    		}
 	    		
 	    		System.out.println("선택 >>> ");
 	    		ch = sc.nextInt();
@@ -87,7 +87,6 @@ public class part4 {
 	    					}
 	    					FileOutputStream fileOutputStream2 = new FileOutputStream(filePath);
 	    					fileOutputStream2.write(outStr.getBytes());
-	    					fileOutputStream2.close();
 	    					System.out.println(name + "를 담았습니다.");
 	    					break;
 	    				}else {
@@ -97,17 +96,10 @@ public class part4 {
 	    		} // for end
 	    		
 	    	} //else if end
-	    	fileOutputStream.close();
-	    	fileInputStream.close();
 	    } // while end
 	}
 
 }
-
-
-
-
-
 
 
 
