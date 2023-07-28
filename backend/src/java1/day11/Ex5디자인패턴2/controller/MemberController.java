@@ -1,5 +1,7 @@
 package java1.day11.Ex5디자인패턴2.controller;
 
+import java.util.Random;
+
 import java1.day11.Ex5디자인패턴2.model.DAO.MemberDao;
 import java1.day11.Ex5디자인패턴2.model.DTO.MemberDto;
 import 과제.과제10.Member2;
@@ -25,7 +27,7 @@ public class MemberController { // 실질적인 기능 처리(유효성검사 �
 			}
 		} // for end
 		return false;	// 회원가입 실패
-	}
+	}	// singupLogic() end
 	
 	public boolean loginLogic(String id, String pw) {
 		for(int i = 0; i < MemberDao.memberList.length; i++) {
@@ -36,7 +38,7 @@ public class MemberController { // 실질적인 기능 처리(유효성검사 �
 			}
 		}	// for end
 		return false;
-	}
+	}	// loginLogic() end
 	
 	public String findIdLogic(String name, String pnum) {
 		for(int i = 0; i < MemberDao.memberList.length; i++){
@@ -47,10 +49,27 @@ public class MemberController { // 실질적인 기능 처리(유효성검사 �
 			}
 		}	// for end
 		return "-1";
-	}
+	}	// findIdLogic() end
 	
-	public void findPwLogic() {
+	public String findPwLogic(String id, String pnum) {
+		Random random = new Random();
+		String temPw = "";
 		
-	}
+		for(int i = 0; i < MemberDao.memberList.length; i++){
+			if(MemberDao.memberList[i] != null &&
+					MemberDao.memberList[i].getId().equals(id) && 
+					MemberDao.memberList[i].getPnum().equals(pnum)) {
+				for(int j = 0; j < 4; j++) {
+					
+					char a = (char) (random.nextInt(26) + 97);
+					temPw += a;
+				}
+				MemberDao.memberList[i].setPw(temPw);
+				return MemberDao.memberList[i].getPw();
+			}
+		}	// for end
+		return "-1";
+		
+	} // findPwLogic() end
 
 }

@@ -74,9 +74,16 @@ public class MainPage {	// view
 	}	// findIdPage() end
 	
 	void findPwPage() {
+		System.out.print("아이디를 입력해주세요 >>> "); String inputId = sc.next();
+		System.out.print("전화번호를 입력해주세요 >>> "); String inputPnum = sc.next();
+		String findPw = MemberController.getInstance().findPwLogic(inputId, inputPnum);
+		if(findPw == "-1") {
+			System.out.println("일치하는 정보가 없습니다.");
+		}else {
+			System.out.println("회원님의 비밀번호 " + findPw + "입니다.");
+		}
 		
-		
-	}
+	}	// findPwPage() end
 }
 
 
