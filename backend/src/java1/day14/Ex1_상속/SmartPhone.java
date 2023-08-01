@@ -8,10 +8,10 @@ public class SmartPhone extends Phone {
 	// 자바는 100% 객체지향 언어 = 상속 문법 사용
 	/*
 	 		- 모든 클래스는 Object 클래스로부터 암묵적으로 상속받음[ 코드적으로 작성x]
-	 						Object 클래스
-	 			___________	|___________
-	 		  |						|					|
-	 		String			Scanner			Phone(직접만든 클래스)
+	 				  ***Object 클래스***
+	 			___________|___________
+	 		   |				   |				  |
+	    	String			Scanner			Phone(직접만든 클래스)
 	 	
 	 	
 	 	
