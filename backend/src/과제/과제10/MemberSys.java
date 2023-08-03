@@ -19,19 +19,14 @@ public class MemberSys {
 		while(true) {
 			
 			System.out.println("\n\n--------- 회원 시스템 ---------"); 
-			if(login < 0) {
-				System.out.print("1.회원가입 2.로그인 3.아이디찾기 4.비밀번호찾기    선택> ");
-			}else {
-				System.out.print("5.회원정보조회 6.로그아웃    선택> ");
-			}
+			System.out.print("1.회원가입 2.로그인 3.아이디찾기 4.비밀번호찾기    선택> ");
+
 			int ch = sc.nextInt(); 	// 입력객체의 사용 구역 범위 설계 [ 프로그램내 전역구역 = static ] 
 			
 			if( ch == 1 ) { 회원가입 (); }
 			else if( ch == 2 ) { 로그인 (); } 
 			else if( ch == 3 ) { 아이디찾기 (); } 
 			else if( ch == 4 ) { 비밀번호찾기 (); }
-			else if( ch == 5 ) { 회원정보조회 (); }
-			else if( ch == 6 ) { 로그아웃 ();}
 			
 		} // w e
 		
@@ -117,14 +112,6 @@ public class MemberSys {
 		
 		
 	}	// 비밀번호찾기 function end
-	
-	static void 회원정보조회() {
-		System.out.println(memberList[login]);
-	}	// 회원정보조회() end
-	
-	static void 로그아웃() {
-		login = -1;
-	}	// 로그아웃() end
 	
 }	// class end
 /*
