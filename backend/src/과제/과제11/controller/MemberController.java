@@ -53,7 +53,7 @@ public class MemberController {
 	
 	public String findById(String name, String pnum) {
 		// - 테스트, view 페이지에서 전달받은 매개변수 확인
-		System.out.println("[Test] view value : " + name + pnum);
+		System.out.println("[Test] view value : " + name + " " + pnum);
 		
 		// Dao에게 매개변수 전달하고 찾은 아이디 반환 받기
 		String result = MemberDao.getInstance().findById(name, pnum);
@@ -63,7 +63,7 @@ public class MemberController {
 	
 	public String findByPw(String id, String pnum) {
 		// - 테스트, view 페이지에서 전달받은 매개변수 확인
-		System.out.println("[Test] view value : " + id + pnum);
+		System.out.println("[Test] view value : " + id + " " + pnum);
 		
 		// Dao에게 매개변수 전달하고 찾은 아이디 반환 받기
 		String result = MemberDao.getInstance().findByPw(id, pnum);

@@ -1,8 +1,11 @@
 package 과제.과제11.view;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
+import 과제.과제11.controller.BoardContoller;
 import 과제.과제11.controller.MemberController;
+import 과제.과제11.model.dto.BoardDto;
 import 과제.과제11.model.dto.MemberDto;
 
 public class LoginPage {
@@ -20,8 +23,10 @@ public class LoginPage {
 	public void loginMenu() {	// 로그인했을때 메뉴 페이지
 		while(MemberController.getInstance().getLoginSession() != 0) {
 			
+			boardPrint();
+			
 			System.out.println("\n\n =====회원제 커뮤니티=====");
-			System.out.println("1. 로그아웃 2. 회원정보  3. 글쓰기");
+			System.out.println("1. 로그아웃 2. 회원정보  3. 글쓰기 4. 글조회 선택");
 			System.out.print("선택 >>> ");
 			
 			try {
@@ -32,6 +37,8 @@ public class LoginPage {
 					}
 				if(ch == 2) { info();}
 				if(ch == 3) { boardWrite(); }
+				if(ch == 4) { boardView(); }
+				
 			}catch(Exception e) {
 				System.out.println("경고) 잘못된 입력입니다.");
 			}
@@ -92,18 +99,54 @@ public class LoginPage {
 	}
 	
 	public void boardWrite() {	// 게시물쓰기 페이지
+		System.out.println("\n\n ===== post write ===== ");
+		sc.nextLine();
+		System.out.print("제목 >>> "); String title  = sc.nextLine();
+		System.out.print("내용 >>> "); String content  = sc.nextLine();
 		
+		boolean result = 
+				BoardContoller.getInstance().boardWrite(title, content);
+		
+		if(result) {System.out.println("안내) 글쓰기 등록 성공");}
+		else {System.out.println("안내) 글쓰기 실패 : 제목 필수 입력");}
 		
 	}
 	
 	public void boardPrint(){	// 모든 게시물 출력
-	
+		System.out.println(" ----- post LIST ----- ");
+		// 여러개의 게시물을 요청해서 반환된 결과 저장
+		ArrayList<BoardDto> result =
+				BoardContoller.getInstance().boardPrint();
+		
+		// 출력
+		System.out.printf("%-4s %-12s %-25s %-30s %s\n", "no", "view", "date", " mid", "title");
+		for(int i = 0; i < result.size(); i++) {
+			BoardDto dto = result.get(i);
+			
+			System.out.printf("%-4d %-12d %-25s %-30s %s\n", dto.getBno(), dto.getBview(), dto.getBwriteDate(), dto.getMid(), dto.getBtitle());
+		}
 		
 	}
 	
 	public void boardView() {	// 개별 게시물 출력
+		System.out.println(" ----- post VIEW ----- ");
+		// 보고자하는 게시물의 번호를 입력받음
+		System.out.println("게시물 번호 : "); int bno = sc.nextInt();
 		
+		BoardDto result = 
+				BoardContoller.getInstance().boardView(bno);
+		// 출력
+		System.out.printf("bno : %-3s view : %-3s mid : %-10s date : %-19s \n",
+				result.getBno(), result.getBview(),
+				result.getMid(), result.getBwriteDate());
+		System.out.printf("title : %s \n" , result.getBtitle());
+		System.out.printf("content : %s \n\n\n" , result.getBcontent());
 		
+		// 추가메뉴
+		System.out.println("1.뒤로가기 2.수정 3.삭제 선택 > "); int ch = sc.nextInt();
+		if(ch == 1) {}
+		if(ch == 2) { boardUpdate();}
+		if(ch == 3) { boardDelete();}
 	}
 	
 	public void boardUpdate() {	// 게시물 수정
@@ -116,3 +159,20 @@ public class LoginPage {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
