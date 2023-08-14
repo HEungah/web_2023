@@ -3,6 +3,7 @@ package 과제.과제11.model.dao;
 import java.util.ArrayList;
 
 import 과제.과제11.model.dto.BoardDto;
+import 과제.과제11.model.dto.MessageDto;
 
 public class BoardDao extends Dao{
 	
@@ -116,14 +117,80 @@ public class BoardDao extends Dao{
 		return view;
 	}
 	
-	public void boardUpdate() {	// 게시물 수정
+	public boolean boardUpdate(BoardDto boardDto) {	// 게시물 수정
 		
-		
+		try {
+			String sql ="update board set btitle = ?, bcontent = ? where bno = ?";
+			ps = conn.prepareStatement(sql);
+			
+			ps.setString(1, boardDto.getBtitle());
+			ps.setString(2, boardDto.getBcontent());
+			ps.setInt(3, boardDto.getBno());
+			
+			int row = ps.executeUpdate();
+			
+			if(row == 1) {return true;}
+			
+			
+		} catch (Exception e) {System.out.println(e);}
+		return false;
 	}
 	
-	public void boardDelete() {	// 게시물 삭제
+	public boolean boardDelete(int bno) {	// 게시물 삭제
 		
+		try {
+			String sql ="delete from board where bno = ?";
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, bno);
+			int row = ps.executeUpdate();
+			if(row == 1) return true;
+			
+		} catch (Exception e) {System.out.println(e);}
+		return false;
 	}
+	
+	// 쪽지보내기
+	public boolean messageSend(int mno1, int mno2, String message) {
+		
+		try {
+			
+			String sql = "insert message(msend, mreceive, mcontent) values( ?, ?, ?)";
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, mno1);
+			ps.setInt(2, mno2);
+			ps.setString(3, message);
+			
+			int row = ps.executeUpdate();
+			if(row == 1) return true;
+			
+		} catch (Exception e) {System.out.println(e);}
+		
+		return false;
+	}
+	
+	public ArrayList<MessageDto> messageView(int mno){
+		
+		ArrayList<MessageDto> list = new ArrayList<>();
+		
+		try {
+			String sql ="select ms.*, mb.mid from message ms, member mb "
+					+ "where ms.msend = mb.mno and mreceive = ? order by ms.mdate desc";
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, mno);
+			
+			rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				MessageDto mDto = new MessageDto(rs.getInt(1), rs.getInt(2), rs.getInt(3), 
+						rs.getString(4), rs.getString(5), rs.getString(6));
+				list.add(mDto);
+			}
+			
+		} catch (Exception e) {System.out.println(e);}
+		
+		return list;
+	}
+	
 
 }
 

@@ -17,7 +17,13 @@ public class BoardDto {	// dto는 이동객체이기때문에 휘발성이다
     
     public BoardDto() {}
     
-    public BoardDto(String btitle, String bcontent, int mno) {
+    public BoardDto(int bno, String btitle, String bcontent) {
+    	this.bno = bno;
+		this.btitle = btitle;
+		this.bcontent = bcontent;
+	}
+
+	public BoardDto(String btitle, String bcontent, int mno) {
 		this.btitle = btitle;
 		this.bcontent = bcontent;
 		this.mno = mno;
