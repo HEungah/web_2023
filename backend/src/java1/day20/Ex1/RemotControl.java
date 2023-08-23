@@ -30,9 +30,9 @@ public interface RemotControl {	// 인터페이스 선언
 		
 		// ---> java 9이상 지원
 		// 5. private 메소드 : 외부에서 구현 x, 디폴트메소드 안에서만 호출 가능
-		private void defalutCommon() {System.out.println();};
+		default void defalutCommon() {System.out.println();};
 		// 6. private 정적메소드 : 디폴트메소드, 정적메소드 호출 가능
-		private static void staticCommon() {System.out.println("정적메소드");}
+		static void staticCommon() {System.out.println("정적메소드");}
 }
 
 
